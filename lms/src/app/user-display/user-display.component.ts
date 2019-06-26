@@ -36,7 +36,6 @@ export class UserDisplayComponent implements OnInit {
   toggleChange(){
     this.flag = !this.flag;
     var post = this.flag;
-    console.log("in component->",this.flag);
     this.request.updateProfile({item:post},this.token);
     location.reload();
   }

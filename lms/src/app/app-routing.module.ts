@@ -14,7 +14,6 @@ import {UserDisplayComponent} from './user-display/user-display.component'
 import { EditComponentComponent } from './edit-component/edit-component.component';
 import { UserComponent } from './user/user.component';
 import { ClassmatesComponent } from './classmates/classmates.component';
-import { FriendRequestComponent } from './friend-request/friend-request.component';
 import { FriendListComponent } from './friend-list/friend-list.component';
 import { ClassmateProfileComponent } from './classmate-profile/classmate-profile.component';
 import { RequestComponent } from './request/request.component';
@@ -34,7 +33,6 @@ const routes: Routes = [
   { path: 'user-display', component:UserDisplayComponent},
   {path:'user',component: UserComponent},
   {path:'classmates', component: ClassmatesComponent},
-  {path:'friend-request', component:FriendRequestComponent},
   {path:'request', component:RequestComponent},
   {path:'friends',component:FriendListComponent},
   {path:'classmate-profile/:id', component:ClassmateProfileComponent}

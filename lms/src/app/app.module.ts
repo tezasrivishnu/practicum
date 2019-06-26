@@ -20,7 +20,6 @@ import { UserDisplayComponent } from './user-display/user-display.component';
 import { UserComponent } from './user/user.component';
 import { ClassmatesComponent } from './classmates/classmates.component';
 import { FriendListComponent } from './friend-list/friend-list.component';
-import { FriendRequestComponent } from './friend-request/friend-request.component';
 import { ClassmateProfileComponent } from './classmate-profile/classmate-profile.component';
 import { RequestComponent } from './request/request.component';
 
@@ -34,7 +33,6 @@ import { RequestComponent } from './request/request.component';
     UserComponent,
     ClassmatesComponent,
     FriendListComponent,
-    FriendRequestComponent,
     ClassmateProfileComponent,
     RequestComponent
   ],

@@ -17,7 +17,6 @@ export class RequestComponent implements OnInit {
   ngOnInit() {
     this.request.getData(this.token).subscribe(data => {
       this.userData = data;
-      console.log("data->",this.userData);
     });
   }
   accept(item){
