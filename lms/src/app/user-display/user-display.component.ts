@@ -40,4 +40,12 @@ export class UserDisplayComponent implements OnInit {
     this.request.updateProfile({item:post},this.token);
     location.reload();
   }
+  additionalFunction(){
+    this.additionalDisplay = true;
+    this.academicDisplay = false;
+  }
+  academicFunction(){
+    this.additionalDisplay = false;
+    this.academicDisplay = true;
+  }
 }
