@@ -8,6 +8,7 @@ import { environment } from 'src/environments/environment';
   providedIn: 'root'
 })
 export class RequestService {
+  static getData: any;
 
   constructor(private httpClient : HttpClient) { }
 
@@ -56,7 +57,7 @@ export class RequestService {
     console.log("")
     var query = environment.apiBaseUrl + "/api/user/friendaccept?token="+token;
     return this.httpClient.post(query,data).subscribe(data =>{
-      console.log(data);;
+      console.log(data);
   });
   }
     getData(token){

@@ -13,6 +13,7 @@ export class UserDisplayComponent implements OnInit {
   userData:any;
   firstName:any;
   lastName:any;
+  accountType;
   userData_DOB:any;
   size:any;
   flag;
@@ -26,12 +27,10 @@ export class UserDisplayComponent implements OnInit {
     this.request.getData(this.token).subscribe(data => {
       this.userData = data;
       this.size = Object.keys(this.userData).length
-      this.firstName = this.userData.firstName;
-      this.lastName = this.userData.lastName;
+      this.firstName = this.userData.firstName.toUpperCase();
+      this.lastName = this.userData.lastName.toUpperCase();
       this.flag = this.userData.isPrivate;
-      this.userData_DOB=this.userData.dateOfBirth.substring(0,10);
-      console.log("size->",this.size);
-      console.log("data->",this.userData);
+      this.accountType = (this.flag) ? "Private Profile":"Public Profile";
     });
   }
   toggleChange(){

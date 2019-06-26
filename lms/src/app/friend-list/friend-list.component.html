@@ -1,4 +1,4 @@
-<div class="d-flex flex-row border rounded">
+<!-- <div class="d-flex flex-row border rounded">
     <div class="p-0 w-25">
         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS52y5aInsxSm31CvHOFHWujqUx_wWTS9iM6s7BAm21oEN_RiGoog" class="img-thumbnail border-0" />
     </div>
@@ -8,4 +8,10 @@
         <p class="text-right m-0"><a routerLink="/classmate-profile/{{item._id}}" class="btn btn-primary"><i class="fa fa-user"></i> View Profile</a></p>
     </div>
 </div>
-
+ -->
+ <div class="card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS52y5aInsxSm31CvHOFHWujqUx_wWTS9iM6s7BAm21oEN_RiGoog" alt=""/>
+        <h1>{{item.firstName}} {{item.lastName}}&nbsp;<i *ngIf = "item.isPrivate" class="fa fa-lock" style="font-size:20px;color: darkgray"></i></h1>
+        <p class="title">{{item.userID}}</p>
+        <p><button routerLink="/classmate-profile/{{item._id}}"><i class="fa fa-user"></i> View Profile</button></p>
+    </div>

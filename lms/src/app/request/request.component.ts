@@ -25,5 +25,8 @@ export class RequestComponent implements OnInit {
     this.request.friendAccept({item:post},this.token);
     this._location.back();
   }
+  close(){
+    this._location.back();
+  }
 
 }

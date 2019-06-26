@@ -1,10 +1,49 @@
-<div *ngIf="userData.isPrivate && !infriends()">
+<!-- <div *ngIf="userData.isPrivate && !infriends()">
         {{userData.firstName}}
         <button (click)="sendRequest()">Send Request</button>
 </div>
-<div *ngIf="userData.isPrivate && infriends()">
-        there
-</div>
-<div *ngIf="!userData.isPrivate">
+<div *ngIf="(userData.isPrivate && infriends()) || !userData.isPrivate">
+        <div class="container emp-profile">
+        <div class="basic-profile">
+                <div class="profile-img">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS52y5aInsxSm31CvHOFHWujqUx_wWTS9iM6s7BAm21oEN_RiGoog" alt=""/>
+                </div>
+                <div class="profile-work">
+                <h3>Basic Info</h3>
+                <b><i class="fa fa-envelope"></i>&nbsp;{{userData.email}}</b><br>
+                <b><i class="fa fa-phone"></i>&nbsp;&nbsp;{{userData.phoneNo}}</b><br>
+                <h3>Social Presence</h3>
+                <b><i class="fa fa-linkedin" style="color: blue;"></i>&nbsp;{{userData.additionalInfo.linkedin}}</b>
+                <a style="float: right;" ></a><br>
+                <b><i class="fa fa-github"></i>&nbsp;{{userData.additionalInfo.github}}</b>
+                <a style="float: right;" ></a><br>
+                <b><i class="fa fa-instagram" style="color: red;"></i>&nbsp;{{userData.additionalInfo.instagram}}</b>
+                <a style="float: right;"></a><br>
+        </div>
+        </div>
+        </div>
+</div> -->
+<!-- <div *ngIf="!userData.isPrivate">
         there here
-</div>
+</div> -->
+<div class="card" *ngIf="userData.isPrivate && !infriends()">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS52y5aInsxSm31CvHOFHWujqUx_wWTS9iM6s7BAm21oEN_RiGoog" alt=""/>
+        <h1>{{userData.firstName}} {{userData.lastName}}</h1>
+        <p class="title">{{userData.userID}}</p>
+        <p><button (click)="sendRequest()">Send Request</button><button (click)="back()">Back</button></p>
+    </div>
+    <div class="card" *ngIf="(userData.isPrivate && infriends()) || !userData.isPrivate">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS52y5aInsxSm31CvHOFHWujqUx_wWTS9iM6s7BAm21oEN_RiGoog" alt=""/>
+        <h1>{{userData.firstName}} {{userData.lastName}}</h1>
+        <p class="title">{{userData.userID}}</p>
+        <div class="profile-work">
+            <h3>Basic Info</h3>
+            <b><i class="fa fa-envelope"></i>&nbsp;{{userData.email}}</b><br>
+            <b><i class="fa fa-phone"></i>&nbsp;&nbsp;{{userData.phoneNo}}</b><br>
+            <h3>Social Presence</h3>
+            <b><i class="fa fa-linkedin" style="color: blue;"></i>&nbsp;{{userData.additionalInfo.linkedin}}</b><br>
+            <b><i class="fa fa-github"></i>&nbsp;{{userData.additionalInfo.github}}</b><br>
+            <b><i class="fa fa-instagram" style="color: red;"></i>&nbsp;{{userData.additionalInfo.instagram}}</b>
+        </div>
+        <p><button (click)="back()">Back</button></p>
+    </div>

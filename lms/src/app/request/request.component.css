@@ -1,0 +1,62 @@
+.hello {
+    height: 200px;
+    width: 400px;
+
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -100px;
+    margin-left: -200px;
+}
+h5 {
+    animation: blinking 1s infinite;
+}
+@keyframes blinking {
+    0%{
+      color: #ff3d50;
+    }
+    /* YOU CAN ADD MORE COLORS IN THE KEYFRAMES IF YOU WANT
+    50%{
+      color: #55d66b;
+    }
+    */
+    100%{
+      color: #222291;
+    }
+  }
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+    font-family: arial;
+  }
+  
+  .title {
+    color: grey;
+    font-size: 18px;
+  }
+  
+  button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #064486;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+  }
+  
+  
+  button:hover, a:hover {
+    opacity: 0.7;
+  }
+  h3 {
+    font-size: 17px;
+    color: #0062cc;
+    font-weight: 600;
+    margin-top: 2%; 
+  }

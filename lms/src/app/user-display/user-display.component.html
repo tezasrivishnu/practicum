@@ -6,9 +6,11 @@
           <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS52y5aInsxSm31CvHOFHWujqUx_wWTS9iM6s7BAm21oEN_RiGoog" alt=""/>
         </div>
         <div class="profile-work">
-            <mat-slide-toggle matInput [color]="primary" [checked]="flag" (change)="toggleChange()">
-              Private/Public
+          <div>
+            <mat-slide-toggle matInput [color]="primary" [checked]="flag" (change)="toggleChange()" style="float: right">
+              {{accountType}}
             </mat-slide-toggle>
+          </div>
             <h3>Basic Info</h3>
             <b><i class="fa fa-envelope"></i>&nbsp;{{userData.email}}</b><br>
             <b><i class="fa fa-phone"></i>&nbsp;&nbsp;{{userData.phoneNo}}</b><br>
@@ -24,9 +26,15 @@
       <div class="col-md-8">
         <div class="profile-head">
           <h2>{{firstName}} {{lastName}}</h2>
-          <input type="submit" routerLink = "/classmates" value="Classmates" style="float: right"/>
-          <input type="submit" routerLink = "/request" value="Requests" style="float: right"/>
-          <h5>{{userData.userID}}</h5>         
+          <h5>{{userData.userID}}</h5> 
+          <div style="float: right">
+          <button routerLink = "/classmates" class="button" value="Classmates"><span>Friends</span>
+          </button>
+          &nbsp;
+          <button routerLink = "/request" class="button" value="Requests"><span>Requests</span>
+          </button>
+        </div>
+                  
           <ul class="nav nav-tabs" id="myTab" role="tablist">
             <li class="nav-item">
               <button class="nav-link" (click) = "additionalFunction()"><span>Additional Info</span></button>
