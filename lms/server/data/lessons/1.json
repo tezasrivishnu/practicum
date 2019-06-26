@@ -1,0 +1,306 @@
+[
+  {
+    "activity_json": [
+      {
+        "activityType": "youtubevideo", 
+        "title": "Lecture 1 Introduction to Deep Learning", 
+        "videoResources": "http://ec2-13-233-148-70.ap-south-1.compute.amazonaws.com/submissions/intro_to_deep_learning/Neural%20Networks/attachments/lec1.intro%20(1).pdf", 
+        "videoURL": "NzBZswFn0-Y"
+      }, 
+      {
+        "URL": "piazza.com", 
+        "activityType": "discussion", 
+        "title": "Discussion forum"
+      }
+    ], 
+    "activity_name": "Lecture 1: Introduction to Deep Learning", 
+    "id": 1, 
+    "module_id": 1
+  }, 
+  {
+    "activity_json": [
+      {
+        "activityType": "quiz", 
+        "questions": [
+          {
+            "correct_feedback": "Correct. Yes. AI is transforming many elds from the car industry to agriculture to supply-chain...", 
+            "max_marks": "1", 
+            "options": [
+              {
+                "correct": false, 
+                "option": "Through the \u201csmart grid\u201d, AI is delivering a new wave of electricity."
+              }, 
+              {
+                "correct": true, 
+                "option": "Similar to electricity starting about 100 years ago, AI is transforming multiple industries."
+              }, 
+              {
+                "correct": false, 
+                "option": "AI runs on computers and is thus powered by electricity, but it is letting computers do things not possible before."
+              }, 
+              {
+                "correct": false, 
+                "option": "AI is powering personal devices in our homes and o ces, similar to electricity."
+              }
+            ], 
+            "questionText": [
+              {
+                "text": "What does the analogy \u201cAI is the new electricity\u201d refer to?"
+              }
+            ], 
+            "questionType": "mcq", 
+            "wrong_feedback": "Incorrect"
+          }, 
+          {
+            "correct_feedback": "['option-1: Yes! The development of hardware, perhaps especially GPU computing, has significantly improved deep learning algorithms' performance.','option-2: Yes! The digitalization of our society has played a huge role in this.']", 
+            "max_marks": "1", 
+            "options": [
+              {
+                "correct": true, 
+                "option": "We have access to a lot more computational power"
+              }, 
+              {
+                "correct": true, 
+                "option": "Deep learning has resulted in significant improvements in important applications such as online advertising, speech recognition, and image recognition."
+              }, 
+              {
+                "correct": true, 
+                "option": "Neural Networks are a brand new eld."
+              }, 
+              {
+                "correct": true, 
+                "option": "We have access to a lot more data."
+              }
+            ], 
+            "questionText": [
+              {
+                "text": "Which of these are reasons for Deep Learning recently taking o ? (Check the two options that apply.)"
+              }
+            ], 
+            "questionType": "checkbox", 
+            "wrong_feedback": "Incorrect"
+          }, 
+          {
+            "correct_feedback": "['option-1: Yes, as discussed in Lecture 4.','option-2: Yes, as discussed in Lecture 4.']", 
+            "max_marks": "1", 
+            "options": [
+              {
+                "correct": true, 
+                "option": "Being able to try out ideas quickly allows deep learning engineers to iterate more quickly."
+              }, 
+              {
+                "correct": true, 
+                "option": "Faster computation can help speed up how long a team takes to iterate to a good idea."
+              }, 
+              {
+                "correct": true, 
+                "option": "It is faster to train on a big dataset than a small dataset."
+              }, 
+              {
+                "correct": true, 
+                "option": "Recent progress in deep learning algorithms has allowed us to train good models faster (even without changing the CPU/GPU hardware)."
+              }
+            ], 
+            "questionText": [
+              {
+                "text": "Recall this diagram of iterating over di erent ML ideas. Which of the statement below true? (Check all that apply.)"
+              }, 
+              {
+                "image": {
+                  "imageName": "", 
+                  "imageSRC": "http://ec2-13-233-148-70.ap-south-1.compute.amazonaws.com/content/intro_to_deep_learning/Neural%20Networks/attachments/image-1.png"
+                }
+              }
+            ], 
+            "questionType": "checkbox", 
+            "wrong_feedback": "Incorrect"
+          }, 
+          {
+            "correct_feedback": "Correct Yes. Finding the characteristics of a model is key to have good performance. Although experience can help, it requires multiple iterations to build a good model.", 
+            "max_marks": "1", 
+            "options": [
+              {
+                "correct": false, 
+                "option": "True"
+              }, 
+              {
+                "correct": true, 
+                "option": "False"
+              }
+            ], 
+            "questionText": [
+              {
+                "text": "When an experienced deep learning engineer works on a new problem, they can usually use insight from previous problems to train a good model on the rst try, without needing to iterate multiple times through di erent models. True/False?"
+              }
+            ], 
+            "questionType": "mcq", 
+            "wrong_feedback": "Incorrect"
+          }, 
+          {
+            "correct_feedback": "Correct! This is the ReLU activation function, the most used in neural networks.", 
+            "max_marks": "1", 
+            "options": [
+              {
+                "correct": false, 
+                "option": "Figure-1"
+              }, 
+              {
+                "correct": false, 
+                "option": "Figure 2"
+              }, 
+              {
+                "correct": true, 
+                "option": "Figure 3"
+              }, 
+              {
+                "correct": false, 
+                "option": "Figure 4"
+              }
+            ], 
+            "questionText": [
+              {
+                "text": "Which one of these plots represents a ReLU activation function?"
+              }, 
+              {
+                "image": {
+                  "imageName": "Figure-1", 
+                  "imageSRC": "http://ec2-13-233-148-70.ap-south-1.compute.amazonaws.com/content/intro_to_deep_learning/Neural%20Networks/attachments/image-2.png"
+                }
+              }, 
+              {
+                "image": {
+                  "imageName": "Figure-2", 
+                  "imageSRC": "http://ec2-13-233-148-70.ap-south-1.compute.amazonaws.com/content/intro_to_deep_learning/Neural%20Networks/attachments/image-3.png"
+                }
+              }, 
+              {
+                "image": {
+                  "imageName": "Figure-3", 
+                  "imageSRC": "http://ec2-13-233-148-70.ap-south-1.compute.amazonaws.com/content/intro_to_deep_learning/Neural%20Networks/attachments/image-4.png"
+                }
+              }, 
+              {
+                "image": {
+                  "imageName": "Figure-4", 
+                  "imageSRC": "http://ec2-13-233-148-70.ap-south-1.compute.amazonaws.com/content/intro_to_deep_learning/Neural%20Networks/attachments/image-5.png"
+                }
+              }
+            ], 
+            "questionType": "mcq", 
+            "wrong_feedback": "Incorrect"
+          }, 
+          {
+            "correct_feedback": "Yes. Images for cat recognition is an example of \u201cunstructured\u201d data.", 
+            "max_marks": "1", 
+            "options": [
+              {
+                "correct": false, 
+                "option": "True"
+              }, 
+              {
+                "correct": true, 
+                "option": "False"
+              }
+            ], 
+            "questionText": [
+              {
+                "text": "Images cat recognition is an example of \u201cstructured\u201d data, because it is Quiz, 10 questions represented as a structured array in a computer. True/False?"
+              }
+            ], 
+            "questionType": "mcq", 
+            "wrong_feedback": "Incorrect"
+          }, 
+          {
+            "correct_feedback": "Correct. A demographic dataset with statistics on di erent cities' population, GDP per capita, economic growth is an example of \"structured\" data by opposition to image, audio or text datasets.", 
+            "max_marks": "1", 
+            "options": [
+              {
+                "correct": false, 
+                "option": "True"
+              }, 
+              {
+                "correct": true, 
+                "option": "False"
+              }
+            ], 
+            "questionText": [
+              {
+                "text": "A demographic dataset with statistics on di erent cities' population, GDP per capita, economic growth is an example of \"structured\" data by opposition to image, audio or text datasets."
+              }
+            ], 
+            "questionType": "mcq", 
+            "wrong_feedback": "Incorrect"
+          }, 
+          {
+            "correct_feedback": "Correct. Yes. An RNN can map from a sequence of english words to a sequence of french words.", 
+            "max_marks": "1", 
+            "options": [
+              {
+                "correct": false, 
+                "option": "It can be trained as a supervised learning problem."
+              }, 
+              {
+                "correct": true, 
+                "option": "It is strictly more powerful than a Convolutional Neural Network (CNN)."
+              }, 
+              {
+                "correct": true, 
+                "option": "It is applicable when the input/output is a sequence (e.g., a sequence of words)."
+              }, 
+              {
+                "correct": true, 
+                "option": "RNNs represent the recurrent process of Idea->Code->Experiment->Idea->...."
+              }
+            ], 
+            "questionText": [
+              {
+                "text": "Why is an RNN (Recurrent Neural Network) used for machine translation, say translating English to French? (Check all that apply.)"
+              }
+            ], 
+            "questionType": "checkbox", 
+            "wrong_feedback": "Incorrect"
+          }, 
+          {
+            "correct_feedback": "Correct", 
+            "max_marks": "1", 
+            "options": [
+              {
+                "correct": false, 
+                "option": "x-axis is the amount of data<br>y-axis is the size of the model you train."
+              }, 
+              {
+                "correct": false, 
+                "option": "x-axis is the performance of the algorithm<br>y-axis (vertical axis) is the amount of data."
+              }, 
+              {
+                "correct": false, 
+                "option": "x-axis is the input to the algorithm<br>y-axis is outputs."
+              }, 
+              {
+                "correct": true, 
+                "option": "x-axis is the amount of data<br>y-axis (vertical axis) is the performance of the algorithm."
+              }
+            ], 
+            "questionText": [
+              {
+                "text": "In this diagram which we hand-drew in lecture, what do the horizontal axis (x-axis)and to  vertical axis (y-axis) represent?"
+              }, 
+              {
+                "image": {
+                  "imageName": "", 
+                  "imageSRC": "http://ec2-13-233-148-70.ap-south-1.compute.amazonaws.com/content/intro_to_deep_learning/Neural%20Networks/attachments/image-6.png"
+                }
+              }
+            ], 
+            "questionType": "mcq", 
+            "wrong_feedback": "Incorrect"
+          }
+        ], 
+        "title": "Quiz"
+      }
+    ], 
+    "activity_name": "Quiz", 
+    "id": 48, 
+    "module_id": 1
+  }
+]

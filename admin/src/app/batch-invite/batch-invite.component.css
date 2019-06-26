@@ -1,0 +1,6 @@
+.flex-item{
+    display: flex;
+    box-sizing: border-box;
+    justify-content: center;
+    width: 90%;
+}

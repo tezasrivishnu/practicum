@@ -1,0 +1,34 @@
+<mat-form-field>
+  <mat-select placeholder="progam" name="program" (click)="selectClicked(0)" (selectionChange)="getCourses()" [(ngModel)]="currentProgram">
+    <mat-option [value]=''>All</mat-option>
+    <mat-option *ngFor="let program of programs" [value]="program._id">
+      {{program.programName}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+
+<mat-form-field *ngIf="currentProgram">
+  <mat-select placeholder="{{environment.globals.course}}" name="course" (click)="selectClicked(1)" (selectionChange)="getCourseInstances()" [(ngModel)]="currentCourse">
+    <mat-option [value]=''>All</mat-option>
+    <mat-option *ngFor="let course of courses" [value]="course._id">
+      {{course.courseName}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+
+<mat-form-field *ngIf="currentCourse">
+  <mat-select placeholder="{{environment.globals.course}} instance" name="courseInstance" (click)="selectClicked(2)" [(ngModel)]="currentCourseInstance">
+    <mat-option [value]=''>All</mat-option>
+    <mat-option *ngFor="let courseInstance of courseInstances" [value]="courseInstance._id">
+      {{courseInstance.courseInstanceLabel}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+<p></p>
+
+<p *ngIf="currentProgram"> {{currentProgram}} </p>
+<p *ngIf="currentCourse"> {{currentCourse}} </p>
+<p *ngIf="currentCourseInstance"> {{currentCourseInstance}} </p>
+
+<button mat-button (click)="submit()">submit</button>
+<button mat-button mat-dialog-close cdkFocusInitial>cancel</button>

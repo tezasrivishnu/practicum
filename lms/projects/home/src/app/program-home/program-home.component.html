@@ -1,0 +1,12 @@
+<div *ngIf="!flag">
+  <p>Please <a href="auth">login</a> to view the content</p>
+</div>
+
+<div class = "mb mat-typography">
+    <br>
+  <mat-card [class.mat-elevation-z2]="true"> {{  programContent.programDescription }}</mat-card>
+  <br>
+  <mat-accordion class="">
+    <app-course-panel *ngFor="let i of this.courses" [courseDetails] = "i"></app-course-panel>
+  </mat-accordion>
+</div>

@@ -1,0 +1,13 @@
+<mat-card class="credits-card">
+    <mat-card-title>
+        <h4 style="text-align: center; font-weight: bold">{{ dataItem.name }}</h4>
+    </mat-card-title>
+    <img mat-card-image src="assets/credits/{{ dataItem.imageName }}" alt="Photo of a Developer">
+    <mat-card-actions fxLayout="row" fxLayoutAlign="space-around center">
+        <a href="{{ dataItem.gitLink }}"><button mat-button><img src="assets/credits/github-logo.svg"></button></a>
+        <a href="{{ dataItem.linkedinLink }}"><button mat-button><img src="assets/credits/linkedin.svg"></button></a>
+    </mat-card-actions>
+    <mat-card-footer>
+        <p class="signature" id="typing{{ index }}"></p>
+    </mat-card-footer>
+</mat-card>

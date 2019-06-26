@@ -1,0 +1,47 @@
+.container {
+  /* display: flex;
+  justify-content: center; */
+  margin: 30px;
+}
+  
+@media screen and (max-width: 500px) {
+  .container{
+    display: inline-flex;
+    justify-content: center;
+    margin: 30px;
+    width: 100%;
+  }
+  .inner-form-element {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 500px) {
+  .form-elements {
+    width: 100%;
+    display: flex;
+  }
+  .inner-form-element {
+    width: 50%;
+  }
+}
+
+.form-element {
+  width: 100%;
+}
+
+.fill-remaining-space{
+  padding-top: 20px;
+  font-size: 30px;
+  font-family: 'ABeeZee', sans-serif;
+}
+
+mat-grid-tile {
+  /* background: lightblue; */
+  /* border-style: solid; */
+}
+
+.mat-card {
+  height: 90%;
+  width: 90%;
+}

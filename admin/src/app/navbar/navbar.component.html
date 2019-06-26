@@ -1,0 +1,12 @@
+<mat-toolbar color="primary" style="height:auto">
+  <mat-toolbar-row>
+      <span id="title" ></span>
+      <button  mat-button  (click)="routeToHome()"><mat-icon class="example-icon">home</mat-icon></button>
+      
+      <span  class="example-spacer">{{title}}</span>
+      <button  mat-button>Admin <mat-icon class="example-icon">account_circle</mat-icon></button>
+      
+      <button  mat-button (click)="log()"><mat-icon class="example-icon">logout</mat-icon></button>
+      
+    </mat-toolbar-row>
+</mat-toolbar>

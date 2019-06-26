@@ -1,0 +1,48 @@
+.example-card {
+    max-width: 700px;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+  .question {
+    margin-bottom: 1rem;
+    font-weight: bold;
+  }
+
+  .choice {
+    margin-bottom: 1rem;
+  }
+
+  .green{
+  
+    color: green;
+  }
+
+  .container {
+    display: flex;
+  }
+
+  .timestamp{
+    margin-top: 2px;
+  }
+
+  .sub-link{
+    width: 100%;
+  }
+
+  .buttons-align{
+    display: flex;
+    justify-content: space-between;
+    
+  }
+
+  .form-error  {
+    -webkit-text-stroke-color: #f44336;
+    -webkit-text-fill-color:  #f44336; /* red */
+  }
+
+  .spinner{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+}

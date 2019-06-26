@@ -1,0 +1,89 @@
+{"message":"User not able to log in due towrong email","level":"error","service":"auth-service","timestamp":"2019-05-31T16:04:24.398Z"}
+{"message":"User not able to log in due towrong email","level":"error","service":"auth-service","timestamp":"2019-05-31T18:25:39.038Z"}
+{"message":"User not able to log in due towrong password","level":"error","service":"auth-service","timestamp":"2019-05-22T18:14:57.314Z"}
+{"message":"User not able to log in due towrong password","level":"error","service":"auth-service","timestamp":"2019-05-22T18:20:13.728Z"}
+{"message":"User not able to log in due towrong password","level":"error","service":"auth-service","timestamp":"2019-05-22T18:20:15.300Z"}
+{"message":"User not able to log in due towrong password","level":"error","service":"auth-service","timestamp":"2019-05-22T18:20:15.612Z"}
+{"message":"User not able to log in due towrong password","level":"error","service":"auth-service","timestamp":"2019-05-22T18:20:26.387Z"}
+{"message":"User not able to log in due towrong password","level":"error","service":"auth-service","timestamp":"2019-05-29T14:17:21.894Z"}
+{"message":"User not able to log in due towrong password","level":"error","service":"auth-service","timestamp":"2019-05-29T14:23:27.879Z"}
+{"message":"User not able to log in due towrong password","level":"error","service":"auth-service","timestamp":"2019-05-31T06:07:23.605Z"}
+{"message":"User not able to log in due towrong password","level":"error","service":"auth-service","timestamp":"2019-05-31T09:11:38.587Z"}
+{"message":"User not able to log in due towrong password","level":"error","service":"auth-service","timestamp":"2019-05-31T09:25:35.341Z"}
+{"message":"User not able to log in due towrong password","level":"error","service":"auth-service","timestamp":"2019-05-31T09:25:56.176Z"}
+{"message":"User not able to log in due towrong password","level":"error","service":"auth-service","timestamp":"2019-05-31T10:15:48.309Z"}
+{"message":"User not able to log in due towrong email","level":"error","service":"auth-service","timestamp":"2019-05-31T16:48:49.444Z"}
+{"message":"User not able to log in due towrong email","level":"error","service":"auth-service","timestamp":"2019-06-01T15:33:31.624Z"}
+{"message":"User not able to log in due towrong email","level":"error","service":"auth-service","timestamp":"2019-06-01T15:33:32.653Z"}
+{"message":"User not able to log in due towrong email","level":"error","service":"auth-service","timestamp":"2019-06-01T15:33:32.817Z"}
+{"message":"Error in getting user details --> Invalid Object ID","level":"error","service":"user-service","timestamp":"2019-06-18T05:17:30.411Z"}
+{"message":"Error in getting user details --> Invalid Object ID","level":"error","service":"user-service","timestamp":"2019-06-18T05:20:48.266Z"}
+{"message":"User not able to log in due towrong email","level":"error","service":"auth-service","timestamp":"2019-06-18T13:19:52.206Z"}
+{"message":"User not able to log in due towrong email","level":"error","service":"auth-service","timestamp":"2019-06-18T13:20:02.695Z"}
+{"message":"User not able to log in due towrong email","level":"error","service":"auth-service","timestamp":"2019-06-18T13:24:04.932Z"}
+{"message":"User not able to log in due towrong email","level":"error","service":"auth-service","timestamp":"2019-06-18T13:26:40.516Z"}
+{"message":"User not able to log in due towrong email","level":"error","service":"auth-service","timestamp":"2019-06-18T13:34:54.362Z"}
+{"message":"User not able to log in due towrong email","level":"error","service":"auth-service","timestamp":"2019-06-18T13:34:59.484Z"}
+{"message":"Error in getting user details --> users is not defined","level":"error","service":"user-service","timestamp":"2019-06-18T15:56:50.184Z"}
+{"message":"Error in getting user details --> old is not defined","level":"error","service":"user-service","timestamp":"2019-06-18T15:57:51.598Z"}
+{"message":"Error in getting user details --> users is not defined","level":"error","service":"user-service","timestamp":"2019-06-18T16:01:10.371Z"}
+{"message":"Error in getting user details --> user.findByIdAndUpdate is not a function","level":"error","service":"user-service","timestamp":"2019-06-19T05:23:55.013Z"}
+{"message":"Error in getting user details --> contentJSON is not defined","level":"error","service":"user-service","timestamp":"2019-06-19T05:50:54.893Z"}
+{"message":"Error in getting user details --> contentJSON is not defined","level":"error","service":"user-service","timestamp":"2019-06-19T05:52:09.619Z"}
+{"message":"Error in getting user details --> contentJSON is not defined","level":"error","service":"user-service","timestamp":"2019-06-19T05:54:59.154Z"}
+{"message":"Error in getting user details --> contentJSON is not defined","level":"error","service":"user-service","timestamp":"2019-06-19T05:55:29.179Z"}
+{"message":"Error in getting user details --> Cannot read property 'insta' of undefined","level":"error","service":"user-service","timestamp":"2019-06-19T09:00:44.013Z"}
+{"message":"Error in getting user details --> Cannot read property 'insta' of undefined","level":"error","service":"user-service","timestamp":"2019-06-19T09:02:14.871Z"}
+{"message":"Error in getting user details --> Cannot read property 'insta' of undefined","level":"error","service":"user-service","timestamp":"2019-06-19T09:03:33.609Z"}
+{"message":"Error in getting user details --> data is not defined","level":"error","service":"user-service","timestamp":"2019-06-20T05:05:17.808Z"}
+{"message":"Error in getting user details --> data is not defined","level":"error","service":"user-service","timestamp":"2019-06-21T04:40:04.782Z"}
+{"message":"Error in getting user details --> Not Found","level":"error","service":"user-service","timestamp":"2019-06-25T09:25:03.340Z"}
+{"message":"Error in getting user details --> Cannot read property '_id' of null","level":"error","service":"user-service","timestamp":"2019-06-25T09:26:27.358Z"}
+{"message":"Error in getting user details --> Cannot read property '_id' of null","level":"error","service":"user-service","timestamp":"2019-06-25T09:56:40.509Z"}
+{"message":"Error in getting user details --> Cannot read property 'item' of undefined","level":"error","service":"user-service","timestamp":"2019-06-25T14:44:52.747Z"}
+{"message":"Error in getting user details --> Cannot read property 'item' of undefined","level":"error","service":"user-service","timestamp":"2019-06-25T14:44:58.131Z"}
+{"message":"Error in getting user details --> Cannot read property 'item' of undefined","level":"error","service":"user-service","timestamp":"2019-06-25T14:46:33.342Z"}
+{"message":"Error in getting user details --> Cannot read property 'item' of undefined","level":"error","service":"user-service","timestamp":"2019-06-25T14:46:40.011Z"}
+{"message":"Error in getting user details --> Cannot read property 'item' of undefined","level":"error","service":"user-service","timestamp":"2019-06-25T14:56:55.884Z"}
+{"message":"Error in getting user details --> Cannot read property 'post' of undefined","level":"error","service":"user-service","timestamp":"2019-06-25T14:58:03.492Z"}
+{"message":"Error in getting user details --> Cannot read property 'post' of undefined","level":"error","service":"user-service","timestamp":"2019-06-25T14:58:10.974Z"}
+{"message":"Error in getting user's id -->Cannot read property 'body' of undefined","level":"error","service":"user-service","timestamp":"2019-06-25T15:02:25.421Z"}
+{"message":"Error in getting user details --> Not Found","level":"error","service":"user-service","timestamp":"2019-06-25T15:17:18.149Z"}
+{"message":"Error in getting user details --> Not Found","level":"error","service":"user-service","timestamp":"2019-06-25T15:17:23.992Z"}
+{"message":"Error in getting user details --> Argument passed in must be a single String of 12 bytes or a string of 24 hex characters","level":"error","service":"user-service","timestamp":"2019-06-25T15:18:36.951Z"}
+{"message":"Error in getting user details --> Argument passed in must be a single String of 12 bytes or a string of 24 hex characters","level":"error","service":"user-service","timestamp":"2019-06-25T15:18:50.563Z"}
+{"message":"Error in getting user details --> Argument passed in must be a single String of 12 bytes or a string of 24 hex characters","level":"error","service":"user-service","timestamp":"2019-06-25T15:18:56.863Z"}
+{"message":"Error in getting user details --> Argument passed in must be a single String of 12 bytes or a string of 24 hex characters","level":"error","service":"user-service","timestamp":"2019-06-25T15:19:43.175Z"}
+{"message":"Error in getting user details --> Argument passed in must be a single String of 12 bytes or a string of 24 hex characters","level":"error","service":"user-service","timestamp":"2019-06-25T16:29:05.216Z"}
+{"message":"Error in getting user details --> Argument passed in must be a single String of 12 bytes or a string of 24 hex characters","level":"error","service":"user-service","timestamp":"2019-06-25T16:30:08.808Z"}
+{"message":"Error in getting user details --> Argument passed in must be a single String of 12 bytes or a string of 24 hex characters","level":"error","service":"user-service","timestamp":"2019-06-25T16:30:31.946Z"}
+{"message":"Error in getting user details --> Argument passed in must be a single String of 12 bytes or a string of 24 hex characters","level":"error","service":"user-service","timestamp":"2019-06-25T16:31:52.462Z"}
+{"message":"Error in getting user details --> Argument passed in must be a single String of 12 bytes or a string of 24 hex characters","level":"error","service":"user-service","timestamp":"2019-06-25T16:32:45.387Z"}
+{"message":"Error in getting user details --> Argument passed in must be a single String of 12 bytes or a string of 24 hex characters","level":"error","service":"user-service","timestamp":"2019-06-25T16:34:15.342Z"}
+{"message":"Error in getting user details --> Argument passed in must be a single String of 12 bytes or a string of 24 hex characters","level":"error","service":"user-service","timestamp":"2019-06-25T16:34:27.027Z"}
+{"message":"Error in getting user details --> Argument passed in must be a single String of 12 bytes or a string of 24 hex characters","level":"error","service":"user-service","timestamp":"2019-06-25T16:35:04.029Z"}
+{"message":"Error in getting user details --> Argument passed in must be a single String of 12 bytes or a string of 24 hex characters","level":"error","service":"user-service","timestamp":"2019-06-25T16:35:57.986Z"}
+{"message":"Error in getting user details --> Argument passed in must be a single String of 12 bytes or a string of 24 hex characters","level":"error","service":"user-service","timestamp":"2019-06-25T16:36:23.547Z"}
+{"message":"Error in getting user details --> Argument passed in must be a single String of 12 bytes or a string of 24 hex characters","level":"error","service":"user-service","timestamp":"2019-06-25T16:36:32.290Z"}
+{"message":"Error in getting user details --> Argument passed in must be a single String of 12 bytes or a string of 24 hex characters","level":"error","service":"user-service","timestamp":"2019-06-25T16:40:43.578Z"}
+{"message":"Error in getting user details --> Argument passed in must be a single String of 12 bytes or a string of 24 hex characters","level":"error","service":"user-service","timestamp":"2019-06-25T16:41:14.457Z"}
+{"message":"Error in getting user details --> Argument passed in must be a single String of 12 bytes or a string of 24 hex characters","level":"error","service":"user-service","timestamp":"2019-06-25T16:45:15.407Z"}
+{"message":"Error in getting user details --> Argument passed in must be a single String of 12 bytes or a string of 24 hex characters","level":"error","service":"user-service","timestamp":"2019-06-25T16:45:28.397Z"}
+{"message":"Error in getting user details --> Argument passed in must be a single String of 12 bytes or a string of 24 hex characters","level":"error","service":"user-service","timestamp":"2019-06-25T16:46:02.942Z"}
+{"message":"Error in getting user details --> Argument passed in must be a single String of 12 bytes or a string of 24 hex characters","level":"error","service":"user-service","timestamp":"2019-06-25T16:46:56.645Z"}
+{"message":"Error in getting user details --> Cannot read property '_id' of null","level":"error","service":"user-service","timestamp":"2019-06-25T16:47:21.030Z"}
+{"message":"Error in getting user details --> Cannot read property '_id' of null","level":"error","service":"user-service","timestamp":"2019-06-25T16:48:14.185Z"}
+{"message":"Error in getting user details --> Cannot read property '_id' of null","level":"error","service":"user-service","timestamp":"2019-06-25T16:50:14.565Z"}
+{"message":"Error in getting user details --> Argument passed in must be a single String of 12 bytes or a string of 24 hex characters","level":"error","service":"user-service","timestamp":"2019-06-25T16:59:34.633Z"}
+{"message":"Error in getting user details --> Argument passed in must be a single String of 12 bytes or a string of 24 hex characters","level":"error","service":"user-service","timestamp":"2019-06-25T17:04:02.710Z"}
+{"message":"Error in getting user's id -->read ECONNRESET","level":"error","service":"user-service","timestamp":"2019-06-26T05:16:44.214Z"}
+{"message":"Error in getting user's id -->read ECONNRESET","level":"error","service":"user-service","timestamp":"2019-06-26T05:18:24.077Z"}
+{"message":"User not able to log in due towrong email","level":"error","service":"auth-service","timestamp":"2019-06-26T05:20:48.839Z"}
+{"message":"Error in getting user details --> Argument passed in must be a single String of 12 bytes or a string of 24 hex characters","level":"error","service":"user-service","timestamp":"2019-06-26T06:25:44.586Z"}
+{"message":"Error in getting user details --> Argument passed in must be a single String of 12 bytes or a string of 24 hex characters","level":"error","service":"user-service","timestamp":"2019-06-26T06:26:41.862Z"}
+{"message":"Error in getting user details --> Argument passed in must be a single String of 12 bytes or a string of 24 hex characters","level":"error","service":"user-service","timestamp":"2019-06-26T06:26:45.519Z"}
+{"message":"Error in getting user details --> Argument passed in must be a single String of 12 bytes or a string of 24 hex characters","level":"error","service":"user-service","timestamp":"2019-06-26T06:27:20.438Z"}
+{"message":"Error in getting user details --> Argument passed in must be a single String of 12 bytes or a string of 24 hex characters","level":"error","service":"user-service","timestamp":"2019-06-26T06:37:28.033Z"}
+{"message":"Error in getting user details --> Argument passed in must be a single String of 12 bytes or a string of 24 hex characters","level":"error","service":"user-service","timestamp":"2019-06-26T06:37:52.471Z"}
+{"message":"Error in getting user details --> Argument passed in must be a single String of 12 bytes or a string of 24 hex characters","level":"error","service":"user-service","timestamp":"2019-06-26T06:39:20.100Z"}
+{"message":"Error in getting user details --> Cannot read property '_id' of null","level":"error","service":"user-service","timestamp":"2019-06-26T06:48:17.167Z"}

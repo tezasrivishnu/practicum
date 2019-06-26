@@ -1,0 +1,20 @@
+[
+  {
+    "activity_json": [
+      {
+        "activityType": "youtubevideo", 
+        "title": "Lecture 8: Conolutional Neural Networks(Part-1)", 
+        "videoResources": "http://ec2-13-233-148-70.ap-south-1.compute.amazonaws.com/submissions/intro_to_deep_learning/Deep%20Neural%20Networks%20Scanning%20for%20patterns%20(aka%20convolutional%20networks)/attachments/lec7.cnn.pdf", 
+        "videoURL": "XNsaNSqe-N4"
+      }, 
+      {
+        "URL": "piazza.com", 
+        "activityType": "discussion", 
+        "title": "Discussion forum"
+      }
+    ], 
+    "activity_name": "Lecture 8: Conolutional Neural Networks(Part-1)", 
+    "id": 8, 
+    "module_id": 7
+  }
+]

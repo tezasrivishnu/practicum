@@ -1,0 +1,20 @@
+[
+  {
+    "activity_json": [
+      {
+        "activityType": "youtubevideo", 
+        "title": "Lecture 13 Recurrent Neural Networks RNN Part-3", 
+        "videoResources": "http://ec2-13-233-148-70.ap-south-1.compute.amazonaws.com/submissions/core_deep_learning/Deep%20Learning%20Recurrent%20Networks%20Part%203/attachments/lec11.recurrent.pdf", 
+        "videoURL": "_J0q9EDt2H8"
+      }, 
+      {
+        "URL": "piazza.com", 
+        "activityType": "discussion", 
+        "title": "Discussion forum"
+      }
+    ], 
+    "activity_name": "Lecture 13 Recurrent Neural Networks RNN Part-3", 
+    "id": 32, 
+    "module_id": 11
+  }
+]

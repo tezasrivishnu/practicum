@@ -1,0 +1,167 @@
+<div class="container">
+  <mat-card>
+    <form [formGroup]="formGroup" class="form">
+      <mat-horizontal-stepper #linearHorizontalStepper="matHorizontalStepper" formArrayName="formArray" [linear]="false">
+        <mat-step formGroupName="0" [stepControl]="formGroup.get('formArray')['controls'][0]">
+          <h1 class="input">Additional Information</h1>
+          <div class="input">
+            <mat-form-field class="inner-form-element">
+              <b>Address*</b>
+              <input matInput name="address" placeholder="" formControlName="address" required>
+            </mat-form-field>
+          </div>
+          <div class="input">
+            <mat-form-field class="inner-form-element">
+                <b>Emergency Contact*</b>
+              <input matInput name="emergencycontact" placeholder="" formControlName="emergencycontact" required>
+            </mat-form-field>
+          </div>
+          <div class="input">
+            <mat-form-field class="inner-form-element">
+                <b>Alternate Email*</b>
+              <input matInput name="alternateemail" placeholder="" formControlName="alternateemail" required>
+            </mat-form-field>
+          </div>
+          <div class="input" style="text-align: right;">
+            <button mat-raised-button matStepperNext type="button">Next</button>
+          </div>
+          <div style="float: right;color: red">
+              * required fields
+            </div>
+        </mat-step>
+        <mat-step formGroupName="1" [stepControl]="formGroup.get('formArray')['controls'][0]">
+          <h1 class="input">Social Profile</h1>
+          <div class="input">
+            <mat-form-field class="inner-form-element">
+              <b>LinkedIn Username</b>
+              <input matInput name="linkedin" placeholder="" formControlName="linkedin">
+            </mat-form-field>
+          
+          </div>
+          <div class="input">
+            <mat-form-field class="inner-form-element">
+              <b>Github Username</b>
+              <input matInput name="github" placeholder="" formControlName="github">
+            </mat-form-field>
+          </div>
+          <div class="input">
+            <mat-form-field class="inner-form-element">
+              <b>Instagram Username</b>
+              <input matInput name="instagram" placeholder="" formControlName="instagram">
+            </mat-form-field>
+          </div>
+          <div class="input" style="text-align: right;">
+            <button mat-raised-button matStepperPrevious type="button">Back</button>
+              &nbsp;&nbsp;
+            <button mat-raised-button matStepperNext type="button">Next</button>
+          </div>
+          <div style="float: right;color: red">
+              * required fields
+            </div>
+        </mat-step>
+        <mat-step formGroupName="2" [stepControl]="formGroup.get('formArray')['controls'][1]">
+          <h1 class="input">Academic Profile</h1>
+          <div class="input">
+            <mat-form-field class="inner-form-element">
+              <b>Tenth School*</b>
+              <input matInput name="tenthschool" placeholder="" formControlName="tenthschool" required>
+            </mat-form-field>
+            &nbsp;&nbsp;
+            <mat-form-field class="inner-form-element">
+              <b>Tenth Percentage/CGPA</b>
+              <input matInput name="tenthmarks" placeholder="" formControlName="tenthmarks" required>
+            </mat-form-field>
+          </div>
+          <div class="input">
+            <mat-form-field class="inner-form-element">
+              <b>Intermediate College*</b>
+              <input matInput name="interschool" placeholder="" formControlName="interschool" required>
+            </mat-form-field>
+            &nbsp;&nbsp;
+            <mat-form-field class="inner-form-element">
+              <b>Inter Percentage/CGPA*</b>
+              <input matInput name="intermarks" placeholder="" formControlName="intermarks" required>
+            </mat-form-field>
+          </div>
+          <div class="input">
+            <mat-form-field class="inner-form-element">
+              <b>Inter Stream*</b>
+              <input matInput name="interstream" placeholder="" formControlName="interstream" required>
+            </mat-form-field>
+          </div>
+          <div class="input">
+            <mat-form-field class="inner-form-element">
+              <b>B.tech College*</b>
+              <input matInput name="btechschool" placeholder="" formControlName="btechschool" required>
+            </mat-form-field>
+            &nbsp;&nbsp;
+            <mat-form-field class="inner-form-element">
+              <b>B.tech Percentage/CGPA*</b>
+              <input matInput required name="btechmarks" placeholder="" formControlName="btechmarks" required>
+            </mat-form-field>
+          </div>
+          <div class="input">
+            <mat-form-field class="inner-form-element">
+              <b>B.tech Stream*</b>
+              <input matInput name="btechstream" placeholder="" formControlName="btechstream" required>
+            </mat-form-field>
+          </div>
+          <div class = "input">
+              <button mat-raised-button matStepperPrevious type="button">Back</button>
+              &nbsp;&nbsp;
+              <button mat-raised-button matStepperNext type="button">Next</button>
+            </div>
+            <div style="float: right;color: red">
+              * required fields
+            </div>
+        </mat-step>
+        <mat-step formGroupName="3" [stepControl]="formGroup.get('formArray')['controls'][2]">
+          <h1 class="input">Work Profile</h1>
+          <div class="input">
+            
+            <mat-form-field class="inner-form-element">
+                <b>Work Experience*</b>
+              <mat-select formControlName="workexperience" placeholder="">
+                <mat-option value="0">0 years</mat-option>
+                <mat-option value="0-2">0-2 years</mat-option>
+                <mat-option value="more than 2">More than 2 years</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+          <div class="input">
+            <mat-form-field class="inner-form-element">
+              <b>Company Name</b>
+              <input matInput name="company" placeholder="" formControlName="company">
+            </mat-form-field>
+          </div>
+          <div class="input">
+              <button mat-raised-button matStepperPrevious type="button">Back</button>
+              &nbsp;&nbsp;
+            <button mat-raised-button color="primary" type="button" (click)="onSubmit(formGroup.value)"  class="button">Submit</button>
+          </div>
+          <div class="input" *ngIf="error" style="font-size:12px;color:red"> fields are missing <br></div>
+          <div style="float: right;color: red">
+              * required fields
+            </div>
+        </mat-step>
+      </mat-horizontal-stepper>
+    </form>
+  </mat-card>
+</div>
+<div *ngIf="size>12">
+<!-- <div>
+  First Name: {{userData.firstName}}
+</div>
+<div>
+  Last Name: {{userData.lastName}}
+</div>
+<div>
+  Email Id: {{userData.email}}
+</div>
+<div>
+  Roll Number: {{userData.userID}}
+</div>
+<div *ngFor = "let item of userData.additionalInfo | keyvalue;index as i">
+  {{item.key}}: {{item.value}}
+  <button type="button" class="btn btn-default" routerLink="/edit/{{item.key}}">Edit</button>
+</div></div> -->

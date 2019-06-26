@@ -1,0 +1,13 @@
+.credits-card {
+    width: 250px;
+  }
+
+  .signature{
+      font-size: 1.5em;
+      text-align: center;
+      font-family: 'Arizonia';
+      color: #2b2b2b;
+      text-shadow: 4px 4px 0px rgba(0,0,0,0.1); 
+  }
+
+  

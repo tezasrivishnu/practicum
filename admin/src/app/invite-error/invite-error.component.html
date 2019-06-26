@@ -1,0 +1,7 @@
+<h2 style="text-align:center">Invalid Entries</h2>
+<form style = "display: flex; justify-content: space-evenly">
+    <mat-form-field style="width:90%">
+        <textarea matInput placeholder="Leave a comment" [(ngModel)]="error" name="errorTextArea" #errorTextArea></textarea>
+    </mat-form-field>
+    <div style="width:5%"><button mat-fab color="primary" matTooltip="Copy to clipboard" (click)="copyInputText(errorTextArea)"><mat-icon>book</mat-icon></button></div>
+</form>

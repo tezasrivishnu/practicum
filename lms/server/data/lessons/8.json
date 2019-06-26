@@ -1,0 +1,51 @@
+[
+  {
+    "activity_json": [
+      {
+        "activityType": "youtubevideo", 
+        "title": "Lecture 9 Convolutional Neural Networks(Part-2)", 
+        "videoResources": "http://ec2-13-233-148-70.ap-south-1.compute.amazonaws.com/submissions/core_deep_learning/Deep%20Neural%20Networks%20Convolutional%20Networks%20II/attachments/lec8.cnn.pdf", 
+        "videoURL": "iiys2ym_E44"
+      }, 
+      {
+        "URL": "piazza.com", 
+        "activityType": "discussion", 
+        "title": "Discussion forum"
+      }
+    ], 
+    "activity_name": "Lecture 9 Convolutional Neural Networks(Part-2)", 
+    "id": 31, 
+    "module_id": 8
+  }, 
+  {
+    "activity_json": [
+      {
+        "activityType": "assignment", 
+        "questions": [
+          {
+            "questionText": [
+              {
+                "text": "Please find the pdf and  zip file"
+              }, 
+              {
+                "attachment": [
+                  "http://ec2-13-233-148-70.ap-south-1.compute.amazonaws.com/submissions/core_deep_learning/Deep%20Neural%20Networks%20Convolutional%20Networks%20II/attachments/rec5.cnn.pdf"
+                ]
+              }, 
+              {
+                "attachment": [
+                  "http://ec2-13-233-148-70.ap-south-1.compute.amazonaws.com/submissions/core_deep_learning/Deep%20Neural%20Networks%20Convolutional%20Networks%20II/attachments/recitation-5.zip"
+                ]
+              }
+            ], 
+            "questionType": "filesubmission"
+          }
+        ], 
+        "title": "Assignment"
+      }
+    ], 
+    "activity_name": "Assignment", 
+    "id": 39, 
+    "module_id": 8
+  }
+]

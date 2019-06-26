@@ -1,0 +1,15 @@
+
+<div class="modal-content hello">
+  <div class="modal-header">
+    <h4 class="modal-title">Enter the new value for {{i}}</h4>
+    <button type="button" class="close" data-dismiss="modal" (click)="back()">&times;</button>
+  </div>
+  <div class="input">
+      <mat-form-field>
+        <input matInput placeholder="Enter here" [(ngModel)]="edit">
+      </mat-form-field>
+    </div>
+      <div class="modal-footer">
+    <button type="button" class="btn btn-default" (click)="modify()">Submit</button>
+  </div>
+</div>

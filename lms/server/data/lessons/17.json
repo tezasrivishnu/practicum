@@ -1,0 +1,64 @@
+[
+  {
+    "activity_json": [
+      {
+        "activityType": "youtubevideo", 
+        "title": "Lecture 21: Hopfield Networks 2", 
+        "videoResources": "http://ec2-13-233-148-70.ap-south-1.compute.amazonaws.com/submissions/adv_deep_learning_models/Neural%20Networks%20Hopfield%20Nets%20and%20Boltzmann%20Machines/attachments/lec19.hopfield2.pdf", 
+        "videoURL": "UIbK-JDlJSE"
+      }, 
+      {
+        "URL": "piazza.com", 
+        "activityType": "discussion", 
+        "title": "Discussion forum"
+      }
+    ], 
+    "activity_name": "Lecture 21: Hopfield Networks 2", 
+    "id": 19, 
+    "module_id": 17
+  }, 
+  {
+    "activity_json": [
+      {
+        "activityType": "youtubevideo", 
+        "title": "Lecture 22: Boltzmann Machines", 
+        "videoResources": "http://ec2-13-233-148-70.ap-south-1.compute.amazonaws.com/submissions/adv_deep_learning_models/Neural%20Networks%20Hopfield%20Nets%20and%20Boltzmann%20Machines/attachments/lec20.bm.pdf", 
+        "videoURL": "V-wLPzCvJog"
+      }, 
+      {
+        "URL": "piazza.com", 
+        "activityType": "discussion", 
+        "title": "Discussion forum"
+      }
+    ], 
+    "activity_name": "Lecture 22: Boltzmann Machines", 
+    "id": 20, 
+    "module_id": 17
+  }, 
+  {
+    "activity_json": [
+      {
+        "activityType": "assignment", 
+        "questions": [
+          {
+            "questionText": [
+              {
+                "text": "Please find the pdf and  zip file"
+              }, 
+              {
+                "attachment": [
+                  "http://ec2-13-233-148-70.ap-south-1.compute.amazonaws.com/submissions/adv_deep_learning_models/Neural%20Networks%20Hopfield%20Nets%20and%20Boltzmann%20Machines/attachments/recitation-11.zip"
+                ]
+              }
+            ], 
+            "questionType": "filesubmission"
+          }
+        ], 
+        "title": "Assignment"
+      }
+    ], 
+    "activity_name": "Assignment", 
+    "id": 46, 
+    "module_id": 17
+  }
+]

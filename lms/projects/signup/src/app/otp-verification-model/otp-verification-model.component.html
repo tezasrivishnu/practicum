@@ -1,0 +1,15 @@
+<div novalidate> 
+  <form [formGroup]="formGroup"  class="form">
+    <mat-form-field class="form-element" required>
+      <input matInput placeholder="Enter Otp" formControlName="otp">
+      <mat-error *ngIf="!formGroup.controls['otp'].valid && formGroup.controls['otp'].touched">
+        Otp required
+      </mat-error>
+    </mat-form-field>
+  </form>
+  <div class="form-element">
+    <button mat-raised-button color="primary" type="button"  [disabled]="!formGroup.valid" (click)="onSubmit(formGroup.value)"  class="button">verify otp</button>
+    &nbsp;&nbsp;&nbsp;
+    <button mat-button mat-dialog-close cdkFocusInitial>cancel</button>
+  </div>
+</div>

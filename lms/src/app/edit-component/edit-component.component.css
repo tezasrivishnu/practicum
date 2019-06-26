@@ -1,0 +1,12 @@
+.hello {
+    width: 500px;
+    height: 175px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .input {
+    display: flex;
+    justify-content: center;
+     }

@@ -1,0 +1,83 @@
+<div class="container">
+  <mat-form-field>
+    <mat-select placeholder="select course" name="course" [(ngModel)]="selectedCourse">
+      <mat-option *ngFor="let course of courses" [value]="course">
+        {{course.courseName}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  <!-- <p> Selected course: {{selectedCourse | json}} </p> -->
+
+  <mat-grid-list cols="2" rowHeight="1:1">
+    <mat-grid-tile>
+      <mat-card [class.mat-elevation-z8]="true">
+        <div *ngIf="selectedCourse!=undefined">
+          <p><strong>ID</strong> : {{ selectedCourse.courseID }}</p>
+          <p><strong>Name</strong> : {{ selectedCourse.courseName }}</p>
+          <p><strong>Description</strong> : {{ selectedCourse.courseDescription }}</p>
+          <p><strong>Incharge</strong> : {{ selectedCourse.courseIncharge }}</p>
+          <p><strong>Instructor</strong> : {{ selectedCourse.courseInstructor }}</p>
+          <p><strong>Repo link</strong> : {{ selectedCourse.courseRepoLink }}</p>
+        </div>
+
+      </mat-card>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <mat-card [class.mat-elevation-z8]="true">
+
+        <form *ngIf="selectedCourse!=undefined" [formGroup]="courseForm" #formDirective="ngForm" (ngSubmit)="onSubmit(formDirective)">
+          <mat-form-field class="form-element">
+            <input matInput formControlName="duration" placeholder="duration" type="number">
+            <mat-error *ngIf="form.duration.errors && form.duration.touched">This is a required field
+            </mat-error>
+          </mat-form-field>
+          <div class="form-elements">
+            <mat-form-field class="inner-form-element">
+              <input matInput formControlName="startDate" [matDatepicker]="startDate" placeholder="start date"
+                #startDateValue>
+              <mat-error *ngIf="form.startDate.errors">
+                <span *ngIf="form.startDate.errors.required && form.startDate.touched">This is a required field</span>
+                <span *ngIf="form.startDate.errors.dateCheck">start date should not be greater than end date</span>
+              </mat-error>
+
+              <mat-datepicker-toggle matSuffix [for]="startDate"></mat-datepicker-toggle>
+              <mat-datepicker #startDate disabled="false"></mat-datepicker>
+            </mat-form-field>
+            &nbsp;
+            <mat-form-field class="inner-form-element">
+              <input matInput formControlName="endDate" [matDatepicker]="endDate" placeholder="end date" #endDateValue>
+              <mat-error *ngIf="form.endDate.errors && form.endDate.touched">This is a required field</mat-error>
+              <mat-datepicker-toggle matSuffix [for]="endDate"></mat-datepicker-toggle>
+              <mat-datepicker #endDate disabled="false"></mat-datepicker>
+            </mat-form-field>
+          </div>
+          <mat-form-field class="form-element">
+            <input matInput formControlName="commitId" placeholder="commit id">
+            <mat-error *ngIf="form.commitId.errors && form.commitId.touched">This is a required field</mat-error>
+          </mat-form-field>
+          <br><br><br>
+          isLive:  &nbsp;&nbsp;&nbsp;&nbsp;
+          <mat-radio-group formControlName="isLive">
+            <mat-radio-button value="true">true</mat-radio-button>&nbsp;&nbsp;&nbsp;&nbsp;
+            <mat-radio-button value="false">false</mat-radio-button>
+          </mat-radio-group>
+          <br><br><br>
+          isAlive: &nbsp;&nbsp;&nbsp;&nbsp;
+          <mat-radio-group formControlName="isAlive">
+            <mat-radio-button value="true">true</mat-radio-button>&nbsp;&nbsp;&nbsp;&nbsp;
+            <mat-radio-button value="false">false</mat-radio-button>
+          </mat-radio-group>
+
+          <mat-form-field class="form-element">
+            <input matInput formControlName="batch" placeholder="batch">
+            <mat-error *ngIf="form.batch.errors && form.batch.touched">This is a required field</mat-error>
+          </mat-form-field>
+          <div class="form-element">
+            <button mat-raised-button color="primary">submit</button>
+            <div *ngIf="!courseForm.valid" style="font-size:12px;color:red">Required fields are missing <br></div>
+          </div>
+        </form>
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>

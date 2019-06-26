@@ -1,0 +1,10 @@
+<mat-card style="width:100%">
+  <mat-chip-list style="width: 100%"> 
+    <div>
+      <span>{{ userData.email }}</span>
+    </div>
+    <div>
+        <mat-chip [color]="color" selected>{{ userData.status }}</mat-chip>
+    </div>
+  </mat-chip-list>
+</mat-card>

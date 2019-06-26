@@ -1,0 +1,21 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    /* width: 200%;
+    border: 5px; */
+    margin-top: 50px;
+    align-items:center;  
+    
+}
+
+.card{
+    display: flex;
+    width: 30rem;
+    justify-content: center;
+    background: #3f51b5;
+    -webkit-text-fill-color: white;
+}
+
+.vertical{
+    margin-bottom: 1rem;
+}

@@ -1,0 +1,22 @@
+.sec2 {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+.container{
+    display: flex;
+    /* flex-direction: column; */
+    /* width: 200%;
+    border: 5px; */
+    margin-top: 50px;
+    justify-content: center;
+    
+}
+
+.lesson-not-found{
+    font-size: 30px;
+}

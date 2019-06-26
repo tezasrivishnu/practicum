@@ -1,0 +1,72 @@
+
+
+<mat-expansion-panel [ngClass]="this.userResponse.evaluationStatus ? 'assignment-eval-color' : 'assignment-neval-color' ">
+
+  <mat-expansion-panel-header>
+    <mat-panel-title>
+      {{userResponse.userId.userID}}
+    </mat-panel-title>
+    <mat-panel-description>
+        {{userResponse.userId.firstName  + " " + userResponse.userId.lastName }}
+    </mat-panel-description>
+  </mat-expansion-panel-header>
+
+  <div>
+    <p>Submission Link: <a [href]="userResponse.response.assignment" target="_blank">Click Here</a> </p>
+    <p>Maximum Marks: {{userResponse.maxMarks}}</p>
+    <p>Submitted at: {{showTimestamp(userResponse.timestamp)}}</p>
+    <form [formGroup]="marksFormSubmit">
+      <mat-form-field>
+        <input matInput formControlName="awardedMarks" placeholder="Marks" (focusout) = "hello()">
+      </mat-form-field>
+      <mat-error *ngIf="!formStatus || marksFormSubmit.controls.awardedMarks.touched && marksFormSubmit.controls.awardedMarks.invalid" class="form-error">
+        <p *ngIf="marksFormSubmit.controls.awardedMarks.errors && marksFormSubmit.controls.awardedMarks.errors.required">
+          Marks are required.
+        </p>
+        <p *ngIf="marksFormSubmit.controls.awardedMarks.errors && marksFormSubmit.controls.awardedMarks.errors.max">
+            Maximum mark are {{userResponse.maxMarks}}, You have awarded {{marksFormSubmit.controls.awardedMarks.errors.max.actual}}.  
+        </p>
+      </mat-error>
+      
+      <!-- <div *ngIf="awardedMarks.errors.min">
+        Maximum marks are {{userResponse.maxMarks}}.
+       </div> -->
+      <mat-form-field class="formSubmit">
+        <mat-label>Feedback</mat-label>
+        <textarea style="height:2em" matInput placeholder="" formControlName="feedback"></textarea>
+        
+      </mat-form-field> 
+      <div *ngIf="!formStatus || marksFormSubmit.controls.feedback.touched && marksFormSubmit.controls.feedback.invalid" class="form-error">
+        <div *ngIf="marksFormSubmit.controls.feedback.errors && marksFormSubmit.controls.feedback.errors.required">
+          Feedback is required. <br>
+        </div>
+      </div>
+      
+      <button mat-raised-button color="ThemePalette" (click)="onSubmit()">{{buttonValue}}</button>
+    <div *ngIf="!formStatus" class="form-error">
+        <div *ngIf="!formStatus">
+          Fill the required fields<br>
+        </div>
+      </div>
+    </form>
+
+      
+      <!-- <form [formGroup]="marksFormSubmit">
+        <mat-form-field>
+          <input matInput formControlName="awardedMarks" placeholder="Marks">
+        </mat-form-field>
+      </form> -->
+      <!-- <form [formGroup]="marksFormSubmit" >
+          <mat-form-field class="formSubmit">
+              <mat-label>Marks</mat-label>
+              <input matInput placeholder="Marks" formControlName="awardedMarks" type="number" min="0" max="{{userResponse.maxMarks}}">
+          </mat-form-field> 
+          <mat-form-field appearance="outline" class="formSubmit">
+              <mat-label>Feedback</mat-label>
+              <textarea style="height:2em" matInput placeholder="Leave a Feedback" formControlName="feedback"></textarea>
+          </mat-form-field> 
+          <button mat-raised-button color="ThemePalette" (click)="onSubmit()">{{buttonValue}}</button>
+      </form> -->
+      
+   </div>
+</mat-expansion-panel>

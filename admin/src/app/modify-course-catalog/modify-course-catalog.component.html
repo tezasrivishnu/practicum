@@ -1,0 +1,38 @@
+
+<button mat-raised-button color="primary"style="margin:1em" routerLink="/create-course">Create a new course</button>
+<button  mat-raised-button *ngIf="course_display"style="margin: 1em"type="submit" color="primary" (click)="sub()">Submit All</button>
+
+<div *ngIf="courseData" style="width:100%;margin: 1em;display: flex" class="mat-typography">
+  <div style="width:40%">
+      <mat-card *ngFor="let course of courseData;index as i" class="card">
+          <mat-card-title>{{course.courseName}}<button mat-button style="margin-left:2.5em;" (click)=view(course,i)>
+                  <mat-icon style="font-size:1.5em">settings</mat-icon>
+              </button></mat-card-title>
+          <mat-card-content>{{course.courseDescription}}</mat-card-content>
+
+      </mat-card>
+      <br>
+  </div>
+  <div *ngIf="course_display" style="margin-left:1em;width:50%;height: 125em">
+      <mat-card class="edit-card">
+        <form class="example-form">
+                <mat-form-field class="example-full-width">
+                        <input matInput placeholder="Course ID" (ngModelChange)="clearFilter()" [(ngModel)]="course_display.courseID" name="Course ID">
+                      </mat-form-field>
+                      
+            <mat-form-field class="example-full-width">
+              <input matInput placeholder="Course Name" (ngModelChange)="clearFilter()" [(ngModel)]="course_display.courseName" name="Course Name">
+            </mat-form-field>
+          
+            <mat-form-field class="example-full-width">
+              <input matInput placeholder="Course Description" (ngModelChange)="clearFilter()" [(ngModel)]="course_display.courseDescription" name="Course Description">
+            </mat-form-field>
+            
+          </form>
+          <mat-slide-toggle color="primary"[(checked)]="course_display.isAlive" (change)="togglealive()">Is the course Alive
+          </mat-slide-toggle>
+      </mat-card>
+  </div>
+  
+</div>
+<div *ngIf="!courseData"></div>

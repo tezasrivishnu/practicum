@@ -1,0 +1,150 @@
+<div class="container emp-profile">
+  <!-- <form> -->
+    <div class="row">
+      <div class="col-md-4">
+        <div class="profile-img">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS52y5aInsxSm31CvHOFHWujqUx_wWTS9iM6s7BAm21oEN_RiGoog" alt=""/>
+        </div>
+        <div class="profile-work">
+            <mat-slide-toggle matInput [color]="primary" [checked]="flag" (change)="toggleChange()">
+              Private/Public
+            </mat-slide-toggle>
+            <h3>Basic Info</h3>
+            <b><i class="fa fa-envelope"></i>&nbsp;{{userData.email}}</b><br>
+            <b><i class="fa fa-phone"></i>&nbsp;&nbsp;{{userData.phoneNo}}</b><br>
+            <h3>Social Presence</h3>
+            <b><i class="fa fa-linkedin" style="color: blue;"></i>&nbsp;{{userData.additionalInfo.linkedin}}</b>
+            <a style="float: right;" routerLink="/edit/linkedin"><i class="fa fa-edit" style="color: blue"></i></a><br>
+            <b><i class="fa fa-github"></i>&nbsp;{{userData.additionalInfo.github}}</b>
+            <a style="float: right;" routerLink="/edit/github"><i class="fa fa-edit" style="color: blue"></i></a><br>
+            <b><i class="fa fa-instagram" style="color: red;"></i>&nbsp;{{userData.additionalInfo.instagram}}</b>
+            <a style="float: right;" routerLink="/edit/instagram"><i class="fa fa-edit" style="color: blue"></i></a><br>
+          </div>
+      </div>
+      <div class="col-md-8">
+        <div class="profile-head">
+          <h2>{{firstName}} {{lastName}}</h2>
+          <input type="submit" routerLink = "/classmates" value="Classmates" style="float: right"/>
+          <input type="submit" routerLink = "/request" value="Requests" style="float: right"/>
+          <h5>{{userData.userID}}</h5>         
+          <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item">
+              <button class="nav-link" (click) = "additionalFunction()"><span>Additional Info</span></button>
+            </li>
+            &nbsp;
+            <li class="nav-item">
+                <button class="nav-link" (click) = "academicFunction()"><span>Academic Profile</span></button>
+            </li>
+          </ul>
+        </div>
+        <div *ngIf="additionalDisplay">
+          <div class="row">
+            <div class="col-md-3">
+                <label>Address</label>
+            </div>
+            <div class="col-md-9">
+                <p>: {{userData.additionalInfo.address}}<a style="float: right;" routerLink="/edit/address"><i class="fa fa-edit" style="color:blue"></i></a></p>
+            </div>
+          </div>
+          <hr>
+          <div class="row">
+            <div class="col-md-3">
+                <label>Emergency Contact</label>
+            </div>
+            <div class="col-md-9">
+                <p>: {{userData.additionalInfo.emergencycontact}}<a style="float: right;" routerLink="/edit/emergencycontact"><i class="fa fa-edit" style="color:blue"></i></a></p>
+            </div>
+          </div>
+          <hr>
+          <div class="row">
+            <div class="col-md-3">
+                <label>Alternate Email</label>
+            </div>
+            <div class="col-md-9">
+                <p>: {{userData.additionalInfo.alternateemail}}<a style="float: right;" routerLink="/edit/alternateemail"><i class="fa fa-edit" style="color:blue"></i></a></p>
+            </div>
+          </div>
+          <hr>
+          <div class="row">
+            <div class="col-md-3">
+                <label>Gender</label>
+            </div>
+            <div class="col-md-9">
+                <p>: {{userData.gender}}</p>
+            </div>
+          </div>
+          <hr>
+        </div>
+        <div *ngIf="academicDisplay">
+          <div class="row">
+            <div class="col-md-5">
+              <label>Tenth School</label>
+            </div>
+            <div class="col-md-7">
+                <p>: {{userData.additionalInfo.tenthschool}}</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-5">
+                <label>Tenth Percentage/CGPA</label>
+            </div>
+            <div class="col-md-7">
+                <p>: {{userData.additionalInfo.tenthmarks}}</p>
+            </div>
+          </div>
+          <hr>
+          <div class="row">
+            <div class="col-md-5">
+                <label>Inter College</label>
+            </div>
+            <div class="col-md-7">
+                <p>: {{userData.additionalInfo.interschool}}</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-5">
+              <label>Inter Stream</label>
+            </div>
+            <div class="col-md-7">
+                <p>: {{userData.additionalInfo.interstream}}</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-5">
+                <label>Inter Percentage/CGPA</label>
+            </div>
+            <div class="col-md-7">
+                <p>: {{userData.additionalInfo.intermarks}}</p>
+            </div>
+          </div>
+          <hr>
+          <div class="row">
+            <div class="col-md-5">
+                <label>B.tech College</label>
+            </div>
+            <div class="col-md-7">
+                <p>: {{userData.additionalInfo.btechschool}}</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-5">
+              <label>B.tech Stream</label>
+            </div>
+            <div class="col-md-7">
+                <p>: {{userData.additionalInfo.btechstream}}</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-5">
+              <label>B.tech Percentage/CGPA</label>
+            </div>
+            <div class="col-md-7">
+                <p>: {{userData.additionalInfo.btechmarks}}</p>
+            </div>
+          </div>
+          <hr>
+        </div>
+      </div>
+    </div>
+  <!-- </form>            -->
+</div>

@@ -1,0 +1,10 @@
+<div *ngIf="userData.isPrivate && !infriends()">
+        {{userData.firstName}}
+        <button (click)="sendRequest()">Send Request</button>
+</div>
+<div *ngIf="userData.isPrivate && infriends()">
+        there
+</div>
+<div *ngIf="!userData.isPrivate">
+        there here
+</div>

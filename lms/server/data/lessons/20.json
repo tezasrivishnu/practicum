@@ -1,0 +1,51 @@
+[
+  {
+    "activity_json": [
+      {
+        "activityType": "youtubevideo", 
+        "title": "Lecture 15: Representation Learning", 
+        "videoResources": "lec15.keshet.pdf", 
+        "videoURL": "754vWvIimPo"
+      }, 
+      {
+        "URL": "piazza.com", 
+        "activityType": "discussion", 
+        "title": "Discussion forum"
+      }
+    ], 
+    "activity_name": "Lecture 15: Representation Learning", 
+    "id": 26, 
+    "module_id": 20
+  }, 
+  {
+    "activity_json": [
+      {
+        "activityType": "assignment", 
+        "questions": [
+          {
+            "questionText": [
+              {
+                "text": "Please find the pdf and  zip file"
+              }, 
+              {
+                "attachment": [
+                  "rec9.pdf"
+                ]
+              }, 
+              {
+                "attachment": [
+                  "recitation-9.zip"
+                ]
+              }
+            ], 
+            "questionType": "filesubmission"
+          }
+        ], 
+        "title": "Assignment"
+      }
+    ], 
+    "activity_name": "Assignment", 
+    "id": 43, 
+    "module_id": 20
+  }
+]

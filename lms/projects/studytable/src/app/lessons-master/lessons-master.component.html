@@ -1,0 +1,28 @@
+<div class="container" *ngIf="!lessons">
+    <p class="lesson-not-found">
+        Yet to upload content
+        , Please come back after sometime&nbsp;&nbsp;<mat-icon color="primary">sentiment_very_satisfied</mat-icon>
+    </p>
+    
+</div>
+
+
+<div class="bounds" *ngIf="lessons" >
+        <h1 style="text-align: center;margin-left: -40px">{{courseName}}</h1>
+    <div class="content" >
+        
+        <div  class="sec2">
+            
+            <mat-toolbar color='primary' style="width:1030px">
+
+                <mat-toolbar-row >
+                    <button mat-icon-button (click)="this.location.back()">
+                        <mat-icon>arrow_back_ios</mat-icon>
+                    </button>
+                    <span>All {{environment.globals.module}}s</span>
+                </mat-toolbar-row>
+            </mat-toolbar>
+            <app-lesson-card   *ngFor='let lesson of lessons' [courseInstanceId]="this.courseInstanceId"  [courseId]="this.courseId" [lesson]='lesson'></app-lesson-card>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,401 @@
+[
+  {
+    "activity_json": [
+      {
+        "activityType": "youtubevideo", 
+        "title": "Lecture 3: Neural Network Traiing", 
+        "videoResources": "http://ec2-13-233-148-70.ap-south-1.compute.amazonaws.com/submissions/intro_to_deep_learning/Learning%20the%20Network%20Part%201/attachments/lec3.learning.pdf", 
+        "videoURL": "x9rO7U6wA54"
+      }, 
+      {
+        "URL": "piazza.com", 
+        "activityType": "discussion", 
+        "title": "Discussion forum"
+      }
+    ], 
+    "activity_name": "Lecture 3: Neural Network Training", 
+    "id": 3, 
+    "module_id": 3
+  }, 
+  {
+    "activity_json": [
+      {
+        "activityType": "quiz", 
+        "questions": [
+          {
+            "correct_feedback": "Correct", 
+            "max_marks": "1", 
+            "options": [
+              {
+                "correct": true, 
+                "option": "A neuron computes a linear function (z = Wx + b) followed by an activation function"
+              }, 
+              {
+                "correct": false, 
+                "option": "A neuron computes the mean of all features before applying the output to an activation function"
+              }, 
+              {
+                "correct": false, 
+                "option": "A neuron computes a function g that scales the input x linearly (Wx + b)"
+              }, 
+              {
+                "correct": false, 
+                "option": "A neuron computes an activation function followed by a linear function (z = Wx + b)"
+              }
+            ], 
+            "questionText": [
+              {
+                "text": "What does a neuron compute?"
+              }
+            ], 
+            "questionType": "mcq", 
+            "wrong_feedback": "Incorrect. There is no mean applied in a neuron."
+          }, 
+          {
+            "correct_feedback": "Correct, this is the logistic loss you've seen in lecture!", 
+            "max_marks": "1", 
+            "options": [
+              {
+                "correct": true, 
+                "option": "Figure-1"
+              }, 
+              {
+                "correct": false, 
+                "option": "Figure-2"
+              }, 
+              {
+                "correct": false, 
+                "option": "Figure-3"
+              }, 
+              {
+                "correct": false, 
+                "option": "Figure-4"
+              }
+            ], 
+            "questionText": [
+              {
+                "text": "Which of these is the \"Logistic Loss\"?"
+              }, 
+              {
+                "image": {
+                  "imageName": "Figure-1", 
+                  "imageSRC": "http://ec2-13-233-148-70.ap-south-1.compute.amazonaws.com/content/intro_to_deep_learning/Learning%20the%20Network%20Part%201/attachments/image-1.png"
+                }
+              }, 
+              {
+                "image": {
+                  "imageName": "Figure-2", 
+                  "imageSRC": "http://ec2-13-233-148-70.ap-south-1.compute.amazonaws.com/content/intro_to_deep_learning/Learning%20the%20Network%20Part%201/attachments/image-2.png"
+                }
+              }, 
+              {
+                "image": {
+                  "imageName": "Figure-3", 
+                  "imageSRC": "http://ec2-13-233-148-70.ap-south-1.compute.amazonaws.com/content/intro_to_deep_learning/Learning%20the%20Network%20Part%201/attachments/image-3.png"
+                }
+              }, 
+              {
+                "image": {
+                  "imageName": "Figure-4", 
+                  "imageSRC": "http://ec2-13-233-148-70.ap-south-1.compute.amazonaws.com/content/intro_to_deep_learning/Learning%20the%20Network%20Part%201/attachments/image-4.png"
+                }
+              }
+            ], 
+            "questionType": "mcq", 
+            "wrong_feedback": "Incorrect"
+          }, 
+          {
+            "correct_feedback": "correct", 
+            "max_marks": "1", 
+            "options": [
+              {
+                "correct": false, 
+                "option": "x = img.reshape((3,32*32))"
+              }, 
+              {
+                "correct": false, 
+                "option": "x = img.reshape((1,32*32,*3))"
+              }, 
+              {
+                "correct": false, 
+                "option": "x = img.reshape((32*32,3))"
+              }, 
+              {
+                "correct": true, 
+                "option": "x = img.reshape((32*32*3,1))"
+              }
+            ], 
+            "questionText": [
+              {
+                "text": "Suppose img is a (32,32,3) array, representing a 32x32 image with 3 color channels red, green and blue. How do you reshape this into a column vector?"
+              }
+            ], 
+            "questionType": "mcq", 
+            "wrong_feedback": "Incorrect"
+          }, 
+          {
+            "correct_feedback": "Correct. Yes! This is broadcasting. b (column vector) is copied 3 times so that it can be summed to each column of a.", 
+            "max_marks": "1", 
+            "options": [
+              {
+                "correct": false, 
+                "option": "The computation cannot happen because the sizes don't match. It's going to be \"Error\"!"
+              }, 
+              {
+                "correct": false, 
+                "option": "c.shape = (3, 2)"
+              }, 
+              {
+                "correct": true, 
+                "option": "c.shape = (2, 3)"
+              }, 
+              {
+                "correct": false, 
+                "option": "c.shape = (2, 1)"
+              }
+            ], 
+            "questionText": [
+              {
+                "text": "Consider the two following random arrays \"a\" and \"b\":"
+              }, 
+              {
+                "image": {
+                  "imageName": "", 
+                  "imageSRC": "http://ec2-13-233-148-70.ap-south-1.compute.amazonaws.com/content/intro_to_deep_learning/Learning%20the%20Network%20Part%201/attachments/image-5.png"
+                }
+              }, 
+              {
+                "text": "What will be the shape of \"c\"?"
+              }
+            ], 
+            "questionType": "mcq", 
+            "wrong_feedback": "Incorrect"
+          }, 
+          {
+            "correct_feedback": "Correct. Indeed! In numpy the \"*\" operator indicates element-wise multiplication. It is di erent from \"np.dot()\". If you would try \"c = np.dot(a,b)\" you would get c.shape = (4, 2).", 
+            "max_marks": "1", 
+            "options": [
+              {
+                "correct": false, 
+                "option": "c.shape = (3, 3)"
+              }, 
+              {
+                "correct": true, 
+                "option": "The computation cannot happen because the sizes don't match. It's going to be \"Error\"!"
+              }, 
+              {
+                "correct": false, 
+                "option": "c.shape = (4, 3)"
+              }, 
+              {
+                "correct": false, 
+                "option": "c.shape = (4, 2)"
+              }
+            ], 
+            "questionText": [
+              {
+                "text": "Consider the two following random arrays \"a\" and \"b\":"
+              }, 
+              {
+                "image": {
+                  "imageName": "", 
+                  "imageSRC": "http://ec2-13-233-148-70.ap-south-1.compute.amazonaws.com/content/intro_to_deep_learning/Learning%20the%20Network%20Part%201/attachments/image-6.png"
+                }
+              }, 
+              {
+                "text": "What will be the shape of \"c\"?"
+              }
+            ], 
+            "questionType": "mcq", 
+            "wrong_feedback": "Incorrect"
+          }, 
+          {
+            "correct_feedback": "Correct ", 
+            "max_marks": "1", 
+            "options": [
+              {
+                "correct": false, 
+                "option": "(1, m)"
+              }, 
+              {
+                "correct": true, 
+                "option": "(n<sub>x</sub>, m)"
+              }, 
+              {
+                "correct": false, 
+                "option": "(m, n<sub>x</sub> )"
+              }, 
+              {
+                "correct": false, 
+                "option": "(m, 1)"
+              }
+            ], 
+            "questionText": [
+              {
+                "text": "Suppose you have n <sub>x</sub> input features per example. Recall that X=[x<sup>(1)</sup>x<sup>(2)</sup>....x<sup>(m)</sup>] the dimension of X?"
+              }
+            ], 
+            "questionType": "mcq", 
+            "wrong_feedback": "Incorrect"
+          }, 
+          {
+            "correct_feedback": "Correct. Correct, remember that a np.dot(a, b) has shape (number of rows of a, number of columns of b). The sizes match because : \"number of columns of a = 150 = number of rows of b\"", 
+            "max_marks": "1", 
+            "options": [
+              {
+                "correct": false, 
+                "option": "c.shape = (12288, 150)"
+              }, 
+              {
+                "correct": false, 
+                "option": "The computation cannot happen because the sizes don't match. It's going to be \"Error\"!"
+              }, 
+              {
+                "correct": true, 
+                "option": "c.shape = (12288, 45)"
+              }, 
+              {
+                "correct": false, 
+                "option": "c.shape = (150,150)"
+              }
+            ], 
+            "questionText": [
+              {
+                "text": "Recall that \"np.dot(a,b)\" performs a matrix multiplication on a and b, whereas \"a*b\" performs an element-wise multiplication.Consider the two following random arrays \"a\" and \"b\":"
+              }, 
+              {
+                "image": {
+                  "imageName": "", 
+                  "imageSRC": "http://ec2-13-233-148-70.ap-south-1.compute.amazonaws.com/content/intro_to_deep_learning/Learning%20the%20Network%20Part%201/attachments/image-7.png"
+                }
+              }, 
+              {
+                "text": "What will be the shape of \"c\"?"
+              }
+            ], 
+            "questionType": "mcq", 
+            "wrong_feedback": "Incorrect"
+          }, 
+          {
+            "correct_feedback": "Correct.", 
+            "max_marks": "1", 
+            "options": [
+              {
+                "correct": true, 
+                "option": "c = a + b.T"
+              }, 
+              {
+                "correct": false, 
+                "option": "c = a.T + b.T"
+              }, 
+              {
+                "correct": false, 
+                "option": "c = a + b"
+              }, 
+              {
+                "correct": false, 
+                "option": "c = a.T + b"
+              }
+            ], 
+            "questionText": [
+              {
+                "text": "Consider the following code snippet:"
+              }, 
+              {
+                "image": {
+                  "imageName": "", 
+                  "imageSRC": "http://ec2-13-233-148-70.ap-south-1.compute.amazonaws.com/content/intro_to_deep_learning/Learning%20the%20Network%20Part%201/attachments/image-8.png"
+                }
+              }, 
+              {
+                "text": "How do you vectorize this?"
+              }
+            ], 
+            "questionType": "mcq", 
+            "wrong_feedback": "Incorrect"
+          }, 
+          {
+            "correct_feedback": "Correct.", 
+            "max_marks": "1", 
+            "options": [
+              {
+                "correct": true, 
+                "option": "This will invoke broadcasting, so b is copied three times to become (3,3), and \u2217 is an element-wise product so c.shape will be (3, 3)"
+              }, 
+              {
+                "correct": false, 
+                "option": "This will invoke broadcasting, so b is copied three times to become (3, 3), and \u2217 invokes a matrix multiplication operation of two 3x3 matrices so c.shape will be (3, 3)"
+              }, 
+              {
+                "correct": false, 
+                "option": "This will multiply a 3x3 matrix a with a 3x1 vector, thus resulting in a 3x1 vector. That is, c.shape = (3,1)."
+              }, 
+              {
+                "correct": false, 
+                "option": "It will lead to an error since you cannot use \u201c*\u201d to operate on these two matrices. You need to instead use np.dot(a,b)"
+              }
+            ], 
+            "questionText": [
+              {
+                "text": "Consider the following code:"
+              }, 
+              {
+                "image": {
+                  "imageName": "", 
+                  "imageSRC": "http://ec2-13-233-148-70.ap-south-1.compute.amazonaws.com/content/intro_to_deep_learning/Learning%20the%20Network%20Part%201/attachments/image-9.png"
+                }
+              }, 
+              {
+                "text": "What will be c? (If you\u2019re not sure, feel free to run this in python to nd out)."
+              }
+            ], 
+            "questionType": "mcq", 
+            "wrong_feedback": "Incorrect"
+          }, 
+          {
+            "correct_feedback": "Correct. Yes. J = u + v - w = a*b + a*c - (b + c) = a * (b + c) - (b + c) = (a - 1) * (b + c).", 
+            "max_marks": "1", 
+            "options": [
+              {
+                "correct": false, 
+                "option": "J = (c - 1)*(b + a)"
+              }, 
+              {
+                "correct": true, 
+                "option": "J = (a - 1) * (b + c)"
+              }, 
+              {
+                "correct": false, 
+                "option": "J = a*b + b*c + a*c"
+              }, 
+              {
+                "correct": false, 
+                "option": "J = (b - 1) * (c + a)"
+              }
+            ], 
+            "questionText": [
+              {
+                "text": "Consider the following computation graph."
+              }, 
+              {
+                "image": {
+                  "imageName": "", 
+                  "imageSRC": "http://ec2-13-233-148-70.ap-south-1.compute.amazonaws.com/content/intro_to_deep_learning/Learning%20the%20Network%20Part%201/attachments/image-9.png"
+                }
+              }, 
+              {
+                "text": "What is the output J?"
+              }
+            ], 
+            "questionType": "mcq", 
+            "wrong_feedback": "Incorrect"
+          }
+        ], 
+        "title": "Quiz"
+      }
+    ], 
+    "activity_name": "Quiz", 
+    "id": 50, 
+    "module_id": 3
+  }
+]

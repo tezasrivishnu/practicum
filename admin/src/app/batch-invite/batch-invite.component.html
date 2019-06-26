@@ -1,0 +1,8 @@
+<div class="flex-item"><h2 style="text-align:center">Bulk Invite</h2></div>
+<div class="flex-item">
+  <mat-form-field appearance="outline" style="width:100%">
+      <mat-label>Fill the form</mat-label>
+      <textarea matInput style="height:20em" placeholder="Enter the details of the users" [(ngModel)]="usersData"></textarea>
+  </mat-form-field>
+</div>
+<div class="flex-item" style= "justify-content: flex-end"><button mat-raised-button color="primary" (click)="dataRetrieve()">Submit</button></div>

@@ -1,0 +1,746 @@
+[
+  {
+    "activity_json": [
+      {
+        "activityType": "youtubevideo", 
+        "title": "Lecture 7: Optimization Part-2", 
+        "videoResources": "http://ec2-13-233-148-70.ap-south-1.compute.amazonaws.com/submissions/intro_to_deep_learning/Neural%20Networks%20Optimization/attachments/lec6.stochastic_gradient.pdf", 
+        "videoURL": "K_MrwZdHvik"
+      }, 
+      {
+        "URL": "piazza.com", 
+        "activityType": "discussion", 
+        "title": "Discussion forum"
+      }
+    ], 
+    "activity_name": "Lecture 7: Optimization Part-2", 
+    "id": 7, 
+    "module_id": 6
+  }, 
+  {
+    "activity_json": [
+      {
+        "activityType": "assignment", 
+        "questions": [
+          {
+            "questionText": [
+              {
+                "text": "Please find the pdf and  zip file"
+              }, 
+              {
+                "attachment": [
+                  "http://ec2-13-233-148-70.ap-south-1.compute.amazonaws.com/submissions/intro_to_deep_learning/Neural%20Networks%20Optimization/attachments/rec4.pdf"
+                ]
+              }, 
+              {
+                "attachment": [
+                  "http://ec2-13-233-148-70.ap-south-1.compute.amazonaws.com/submissions/intro_to_deep_learning/Neural%20Networks%20Optimization/attachments/recitation-4.zip"
+                ]
+              }
+            ], 
+            "questionType": "filesubmission"
+          }
+        ], 
+        "title": "Assignment"
+      }
+    ], 
+    "activity_name": "Assignment", 
+    "id": 38, 
+    "module_id": 6
+  }, 
+  {
+    "activity_json": [
+      {
+        "activityType": "quiz", 
+        "questions": [
+          {
+            "correct_feedback": "Correct", 
+            "max_marks": "1", 
+            "options": [
+              {
+                "correct": true, 
+                "option": "a<sup>[3]{8}(7)</sup>"
+              }, 
+              {
+                "correct": false, 
+                "option": "a<sup>[8]{7}(3)</sup>"
+              }, 
+              {
+                "correct": false, 
+                "option": "a<sup>[8]{3}(7)</sup>"
+              }, 
+              {
+                "correct": false, 
+                "option": "a<sup>[3]{7}(8)</sup>"
+              }
+            ], 
+            "questionText": [
+              {
+                "text": "Which notation would you use to denote the 3rd layer\u2019s activations when the input is the 7th example from the 8th minibatch?"
+              }
+            ], 
+            "questionType": "mcq", 
+            "wrong_feedback": "Incorrect."
+          }, 
+          {
+            "correct_feedback": "Correct", 
+            "max_marks": "1", 
+            "options": [
+              {
+                "correct": false, 
+                "option": "Training one epoch (one pass through the training set) using mini- batch gradient descent is faster than training one epoch using batch gradient descent."
+              }, 
+              {
+                "correct": false, 
+                "option": "One iteration of mini-batch gradient descent (computing on a single mini-batch) is faster than one iteration of batch gradient descent."
+              }, 
+              {
+                "correct": false, 
+                "option": "You should implement mini-batch gradient descent without an explicit for-loop over different mini-batches, so that the algorithm processes all mini-batches at the same time (vectorization)."
+              }
+            ], 
+            "questionText": [
+              {
+                "text": "Which of these statements about mini-batch gradient descent do you agree with?"
+              }
+            ], 
+            "questionType": "mcq", 
+            "wrong_feedback": "Incorrect"
+          }, 
+          {
+            "correct_feedback": "correct", 
+            "max_marks": "1", 
+            "options": [
+              {
+                "correct": true, 
+                "option": "If the mini-batch size is 1, you end up having to process the entire training set before making any progress."
+              }, 
+              {
+                "correct": true, 
+                "option": "If the mini-batch size is m, you end up with batch gradient descent, which has to process the whole training set before making progress."
+              }, 
+              {
+                "correct": true, 
+                "option": "If the mini-batch size is 1, you lose the benefits of vectorization across examples in the mini-batch."
+              }, 
+              {
+                "correct": true, 
+                "option": "If the mini-batch size is m, you end up with stochastic gradient descent, which is usually slower than mini-batch gradient descent."
+              }
+            ], 
+            "questionText": [
+              {
+                "text": "Why is the best mini-batch size usually not 1 and not m, but instead something in-between?"
+              }
+            ], 
+            "questionType": "checkbox", 
+            "wrong_feedback": "Incorrect"
+          }, 
+          {
+            "correct_feedback": "correct", 
+            "max_marks": "1", 
+            "options": [
+              {
+                "correct": false, 
+                "option": "Whether you\u2019re using batch gradient descent or mini-batch gradient descent, this looks acceptable."
+              }, 
+              {
+                "correct": false, 
+                "option": "Whether you\u2019re using batch gradient descent or mini-batch gradient descent, something is wrong."
+              }, 
+              {
+                "correct": false, 
+                "option": "If you\u2019re using mini-batch gradient descent, something is wrong. But if you\u2019re using batch gradient descent, this looks acceptable."
+              }, 
+              {
+                "correct": true, 
+                "option": "If you\u2019re using mini-batch gradient descent, this looks acceptable. But if you\u2019re using batch gradient descent, something is wrong."
+              }
+            ], 
+            "questionText": [
+              {
+                "text": "Suppose your learning algorithm's cost J , plotted as a function of the number of  iterations, looks like this:"
+              }, 
+              {
+                "image": {
+                  "imageName": "", 
+                  "imageSRC": "http://ec2-13-233-148-70.ap-south-1.compute.amazonaws.com/content/intro_to_deep_learning/Neural%20Networks%20Optimization/attachments/image-1.png"
+                }
+              }, 
+              {
+                "text": "Which of the following do you agree with?"
+              }
+            ], 
+            "questionType": "mcq", 
+            "wrong_feedback": "Incorrect"
+          }, 
+          {
+            "correct_feedback": "correct", 
+            "max_marks": "1", 
+            "options": [
+              {
+                "correct": false, 
+                "option": "v<sub>2</sub>=10, v<sup>connected</sup><sub>2</sub>=10"
+              }, 
+              {
+                "correct": true, 
+                "option": "v<sub>2</sub>=7.5, v<sup>connected</sup><sub>2</sub>=10"
+              }, 
+              {
+                "correct": false, 
+                "option": "v<sub>2</sub>=10, v<sup>connected</sup><sub>2</sub>=7.5"
+              }, 
+              {
+                "correct": false, 
+                "option": "v<sub>2</sub>=7.5, v<sup>connected</sup><sub>2</sub>=10"
+              }
+            ], 
+            "questionText": [
+              {
+                "text": "Suppose the temperature in Casablanca over the first three days of January are the same:<br><br>Jan 1st: \u03b8<sub>1</sub>= 10<sup>o</sup>C<br><br>Jan 2nd: \u03b8<sub>2</sub>10<sup>o</sup>C<br>(We used Fahrenheit in lecture, so will use Celsius here in honor of the metric world.)<br><br>Say you use an exponentially weighted average with \u03b2 = 0.5 to track the temperature: v 0 = 0 , v t = \u03b2 v t\u22121 + (1 \u2212 \u03b2) \u03b8 t . If v 2 is the value computed after  day 2 without bias correction, and v corrected is the value you compute with bias 2 correction. What are these values? (You might be able to do this without calculator, but you don't actually need one. Remember what is bias correction doing.)"
+              }
+            ], 
+            "questionType": "mcq", 
+            "wrong_feedback": "Incorrect"
+          }, 
+          {
+            "correct_feedback": "correct", 
+            "max_marks": "1", 
+            "options": [
+              {
+                "correct": false, 
+                "option": "v<sub>2</sub>=10, v<sup>connected</sup><sub>2</sub>=10"
+              }, 
+              {
+                "correct": true, 
+                "option": "v<sub>2</sub>=7.5, v<sup>connected</sup><sub>2</sub>=10"
+              }, 
+              {
+                "correct": false, 
+                "option": "v<sub>2</sub>=10, v<sup>connected</sup><sub>2</sub>=7.5"
+              }, 
+              {
+                "correct": false, 
+                "option": "v<sub>2</sub>=7.5, v<sup>connected</sup><sub>2</sub>=10"
+              }
+            ], 
+            "questionText": [
+              {
+                "text": "Suppose the temperature in Casablanca over the first three days of January are the same:<br><br>Jan 1st: \u03b8<sub>1</sub>= 10<sup>o</sup>C<br><br>Jan 2nd: \u03b8<sub>2</sub>10<sup>o</sup>C<br>(We used Fahrenheit in lecture, so will use Celsius here in honor of the metric world.)<br><br>Say you use an exponentially weighted average with \u03b2 = 0.5 to track the temperature: v 0 = 0 , v t = \u03b2 v t\u22121 + (1 \u2212 \u03b2) \u03b8 t . If v 2 is the value computed after  day 2 without bias correction, and v corrected is the value you compute with bias 2 correction. What are these values? (You might be able to do this without calculator, but you don't actually need one. Remember what is bias correction doing.)"
+              }
+            ], 
+            "questionType": "mcq", 
+            "wrong_feedback": "Incorrect"
+          }, 
+          {
+            "correct_feedback": "correct", 
+            "max_marks": "1", 
+            "options": [
+              {
+                "correct": false, 
+                "option": "Figure-1"
+              }, 
+              {
+                "correct": false, 
+                "option": "Figure-2"
+              }, 
+              {
+                "correct": true, 
+                "option": "Figure-3"
+              }, 
+              {
+                "correct": false, 
+                "option": "Figure-4"
+              }
+            ], 
+            "questionText": [
+              {
+                "text": "Which of these is NOT a good learning rate decay scheme? Here, t is the epoch number."
+              }, 
+              {
+                "image": {
+                  "imageName": "Figure-1", 
+                  "imageSRC": "http://ec2-13-233-148-70.ap-south-1.compute.amazonaws.com/content/intro_to_deep_learning/Neural%20Networks%20Optimization/attachments/image-2.png"
+                }
+              }, 
+              {
+                "image": {
+                  "imageName": "Figure-2", 
+                  "imageSRC": "http://ec2-13-233-148-70.ap-south-1.compute.amazonaws.com/content/intro_to_deep_learning/Neural%20Networks%20Optimization/attachments/image-3.png"
+                }
+              }, 
+              {
+                "image": {
+                  "imageName": "Figure-3", 
+                  "imageSRC": "http://ec2-13-233-148-70.ap-south-1.compute.amazonaws.com/content/intro_to_deep_learning/Neural%20Networks%20Optimization/attachments/image-4.png"
+                }
+              }, 
+              {
+                "image": {
+                  "imageName": "Figure-4", 
+                  "imageSRC": "http://ec2-13-233-148-70.ap-south-1.compute.amazonaws.com/content/intro_to_deep_learning/Neural%20Networks%20Optimization/attachments/image-5.png"
+                }
+              }
+            ], 
+            "questionType": "mcq", 
+            "wrong_feedback": "Incorrect"
+          }, 
+          {
+            "correct_feedback": "['option-2: True, remember that the red line corresponds to \u03b2 = 0.9 . In lecture we had a green line $$\beta = 0.98) that is slightly shifted to the right.','option-2: True, remember that the red line corresponds to \u03b2 = 0.9 . In lecture we had a yellow line $$\beta = 0.98 that had a lot of oscillations.']", 
+            "max_marks": "1", 
+            "options": [
+              {
+                "correct": true, 
+                "option": "Decreasing \u03b2 will shift the red line slightly to the right."
+              }, 
+              {
+                "correct": true, 
+                "option": "Increasing \u03b2 will shift the red line slightly to the right."
+              }, 
+              {
+                "correct": true, 
+                "option": "Decreasing \u03b2 will create more oscillation within the red line."
+              }, 
+              {
+                "correct": true, 
+                "option": "Increasing \u03b2 will create more oscillations within the red line."
+              }
+            ], 
+            "questionText": [
+              {
+                "text": "You use an exponentially weighted average on the London temperature dataset. You use the following to track the temperature: v t = \u03b2 v t\u22121 + (1 \u2212 \u03b2) \u03b8 t . The red line below was computed using \u03b2 = 0.9 . What would happen to your red curve as you vary \u03b2 ? (Check the two that apply)"
+              }, 
+              {
+                "image": {
+                  "imageName": "", 
+                  "imageSRC": "http://ec2-13-233-148-70.ap-south-1.compute.amazonaws.com/content/intro_to_deep_learning/Neural%20Networks%20Optimization/attachments/image-6.png"
+                }
+              }
+            ], 
+            "questionType": "checkbox", 
+            "wrong_feedback": "Incorrect"
+          }, 
+          {
+            "correct_feedback": "correct", 
+            "max_marks": "1", 
+            "options": [
+              {
+                "correct": false, 
+                "option": "(1) is gradient descent. (2) is gradient descent with momentum (large \u03b2 ) . (3) is gradient descent with momentum (small \u03b2 )"
+              }, 
+              {
+                "correct": true, 
+                "option": "(1) is gradient descent. (2) is gradient descent with momentum (small \u03b2 ) . (3) is gradient descent with momentum (large \u03b2 )"
+              }, 
+              {
+                "correct": false, 
+                "option": "(1) is gradient descent with momentum (small \u03b2 ), (2) is gradient descent with momentum (small \u03b2 ), (3) is gradient descent"
+              }, 
+              {
+                "correct": false, 
+                "option": "(1) is gradient descent with momentum (small \u03b2 ). (2) is gradient descent. (3) is gradient descent with momentum (large \u03b2 )"
+              }
+            ], 
+            "questionText": [
+              {
+                "text": "Consider this gure:"
+              }, 
+              {
+                "image": {
+                  "imageName": "", 
+                  "imageSRC": "http://ec2-13-233-148-70.ap-south-1.compute.amazonaws.com/content/intro_to_deep_learning/Neural%20Networks%20Optimization/attachments/image-7.png"
+                }
+              }, 
+              {
+                "text": "These plots were generated with gradient descent; with gradient descent with momentum ( \u03b2 = 0.5) and gradient descent with momentum ( \u03b2 = 0.9). Which curve corresponds to which algorithm?"
+              }
+            ], 
+            "questionType": "mcq", 
+            "wrong_feedback": "Incorrect"
+          }, 
+          {
+            "correct_feedback": "correct", 
+            "max_marks": "1", 
+            "options": [
+              {
+                "correct": true, 
+                "option": "Try better random initialization for the weights"
+              }, 
+              {
+                "correct": true, 
+                "option": "Try mini-batch gradient descent"
+              }, 
+              {
+                "correct": true, 
+                "option": "Try using Adam"
+              }, 
+              {
+                "correct": true, 
+                "option": "Try initializing all the weights to zero"
+              }, 
+              {
+                "correct": true, 
+                "option": "Try tuning the learning rate \u03b1"
+              }
+            ], 
+            "questionText": [
+              {
+                "text": "Suppose batch gradient descent in a deep network is taking excessively long to nd a value of the parameters that achieves a small value for the cost function . Which of the following techniques could help nd parameter values that attain a small value for J ? (Check all that apply)"
+              }
+            ], 
+            "questionType": "checkbox", 
+            "wrong_feedback": "Incorrect"
+          }, 
+          {
+            "correct_feedback": "correct", 
+            "max_marks": "1", 
+            "options": [
+              {
+                "correct": true, 
+                "option": "Adam should be used with batch gradient computations, not with mini- batches."
+              }, 
+              {
+                "correct": true, 
+                "option": "The learning rate hyperparameter \u03b1 in Adam usually needs to be tuned."
+              }, 
+              {
+                "correct": true, 
+                "option": "Adam combines the advantages of RMSProp and momentum"
+              }, 
+              {
+                "correct": true, 
+                "option": "Try initializing all the weights to zero"
+              }, 
+              {
+                "correct": true, 
+                "option": "We usually use \u201cdefault\u201d values for the hyperparameters \u03b2 1 , \u03b2 2 and \u03b5 in Adam ( \u03b2 1 = 0.9 , \u03b2 2 = 0.999 , \u03b5 = 10<sup>\u22128</sup> )"
+              }
+            ], 
+            "questionText": [
+              {
+                "text": "Which of the following statements about Adam is False?"
+              }
+            ], 
+            "questionType": "mcq", 
+            "wrong_feedback": "Incorrect"
+          }
+        ], 
+        "title": "Quiz"
+      }
+    ], 
+    "activity_name": "Quiz-1", 
+    "id": 57, 
+    "module_id": 6
+  }, 
+  {
+    "activity_json": [
+      {
+        "activityType": "quiz", 
+        "questions": [
+          {
+            "correct_feedback": "Correct", 
+            "max_marks": "1", 
+            "options": [
+              {
+                "correct": false, 
+                "option": "33% train . 33% dev . 33% test"
+              }, 
+              {
+                "correct": "True", 
+                "option": "98% train . 1% dev . 1% test"
+              }, 
+              {
+                "correct": false, 
+                "option": "60% train . 20% dev . 20% test"
+              }
+            ], 
+            "questionText": [
+              {
+                "text": "If you have 10,000,000 examples, how would you split the train/dev/test set?"
+              }
+            ], 
+            "questionType": "mcq", 
+            "wrong_feedback": "Incorrect."
+          }, 
+          {
+            "correct_feedback": "Correct", 
+            "max_marks": "1", 
+            "options": [
+              {
+                "correct": "True", 
+                "option": "Come from the same distribution"
+              }, 
+              {
+                "correct": false, 
+                "option": "Come from different distributions"
+              }, 
+              {
+                "correct": false, 
+                "option": "identical each other (same (x,y) pairs)"
+              }, 
+              {
+                "correct": false, 
+                "option": "Have the same number of examples"
+              }
+            ], 
+            "questionText": [
+              {
+                "text": "The dev and test set should:"
+              }
+            ], 
+            "questionType": "mcq", 
+            "wrong_feedback": "Incorrect"
+          }, 
+          {
+            "correct_feedback": "correct", 
+            "max_marks": "1", 
+            "options": [
+              {
+                "correct": "True", 
+                "option": "Add regularization"
+              }, 
+              {
+                "correct": "True", 
+                "option": "Make the Neural Network deeper"
+              }, 
+              {
+                "correct": "True", 
+                "option": "Get more training data"
+              }, 
+              {
+                "correct": "True", 
+                "option": "Increase the number of units in each hidden layer"
+              }, 
+              {
+                "correct": "True", 
+                "option": "Get more test data"
+              }
+            ], 
+            "questionText": [
+              {
+                "text": "If your Neural Network model seems to have high variance, what of the following would be promising things to try?"
+              }
+            ], 
+            "questionType": "checkbox", 
+            "wrong_feedback": "Incorrect"
+          }, 
+          {
+            "correct_feedback": "Correct", 
+            "max_marks": "1", 
+            "options": [
+              {
+                "correct": "True", 
+                "option": "Increase the regularization parameter lambda"
+              }, 
+              {
+                "correct": "True", 
+                "option": "Decrease the regularization parameter lambda"
+              }, 
+              {
+                "correct": "True", 
+                "option": "Get more training data"
+              }, 
+              {
+                "correct": "True", 
+                "option": "Use a bigger neural network"
+              }
+            ], 
+            "questionText": [
+              {
+                "text": "You are working on an learning automated check-out kiosk for a supermarket, and are building a classi er for apples, bananas and oranges. Suppose your classi er obtains a training set error of 0.5%, and a dev set error of 7%. Which of the following are promising things to try to improve your classi er? (Check all that apply.)"
+              }
+            ], 
+            "questionType": "checkbox", 
+            "wrong_feedback": "Incorrect"
+          }, 
+          {
+            "correct_feedback": "Correct", 
+            "max_marks": "1", 
+            "options": [
+              {
+                "correct": "True", 
+                "option": "A regularization technique (such as L2 regularization) that results in gradient descent shrinking the weights on every iteration."
+              }, 
+              {
+                "correct": false, 
+                "option": "Gradual corruption of the weights in the neural network if it is trained on noisy data."
+              }, 
+              {
+                "correct": false, 
+                "option": "The process of gradually decreasing the learning rate during training."
+              }, 
+              {
+                "correct": false, 
+                "option": "A technique avoid vanishing gradient by imposing a ceiling on the values of the weights."
+              }
+            ], 
+            "questionText": [
+              {
+                "text": "What is weight decay?"
+              }
+            ], 
+            "questionType": "mcq", 
+            "wrong_feedback": "Incorrect"
+          }, 
+          {
+            "correct_feedback": "Correct ", 
+            "max_marks": "1", 
+            "options": [
+              {
+                "correct": "True", 
+                "option": "Weights are pushed toward becoming smaller (closer to 0)"
+              }, 
+              {
+                "correct": false, 
+                "option": "Weights are pushed toward becoming bigger (further from 0)"
+              }, 
+              {
+                "correct": false, 
+                "option": "Doubling lambda should roughly result in doubling the weights"
+              }, 
+              {
+                "correct": false, 
+                "option": "Gradient descent taking bigger steps with each iteration (proportional to lambda)"
+              }
+            ], 
+            "questionText": [
+              {
+                "text": "What happens when you increase the regularization hyperparameter lambda?"
+              }
+            ], 
+            "questionType": "mcq", 
+            "wrong_feedback": "Incorrect"
+          }, 
+          {
+            "correct_feedback": "Correct.", 
+            "max_marks": "1", 
+            "options": [
+              {
+                "correct": false, 
+                "option": "You do not apply dropout (do not randomly eliminate units), but keep the 1/keep_prob factor in the calculations used in training."
+              }, 
+              {
+                "correct": "True", 
+                "option": "You do not apply dropout (do not randomly eliminate units) and do not keep the 1/keep_prob factor in the calculations used in training"
+              }, 
+              {
+                "correct": false, 
+                "option": "You apply dropout (randomly eliminating units) and do not keep the 1/keep_prob factor in the calculations used in training"
+              }, 
+              {
+                "correct": false, 
+                "option": "You apply dropout (randomly eliminating units) but keep the 1/keep_prob factor in the calculations used in training."
+              }
+            ], 
+            "questionText": [
+              {
+                "text": "With the inverted dropout technique, at test time:"
+              }
+            ], 
+            "questionType": "mcq", 
+            "wrong_feedback": "Incorrect"
+          }, 
+          {
+            "correct_feedback": "Correct.", 
+            "max_marks": "1", 
+            "options": [
+              {
+                "correct": "True", 
+                "option": "Increasing the regularization effect"
+              }, 
+              {
+                "correct": "True", 
+                "option": "Reducing the regularization effect"
+              }, 
+              {
+                "correct": "True", 
+                "option": "Causing the neural network to end up with a higher training set error"
+              }, 
+              {
+                "correct": "True", 
+                "option": "Causing the neural network to end up with a lower training set error"
+              }
+            ], 
+            "questionText": [
+              {
+                "text": "Increasing the parameter keep_prob from (say) 0.5 to 0.6 will likely cause the following: (Check the two that apply)"
+              }
+            ], 
+            "questionType": "checkbox", 
+            "wrong_feedback": "Incorrect"
+          }, 
+          {
+            "correct_feedback": "Correct.", 
+            "max_marks": "1", 
+            "options": [
+              {
+                "correct": "True", 
+                "option": "Data augmentation"
+              }, 
+              {
+                "correct": "True", 
+                "option": "Dropout"
+              }, 
+              {
+                "correct": "True", 
+                "option": "Gradient Checking."
+              }, 
+              {
+                "correct": "True", 
+                "option": "Vanishing gradient"
+              }, 
+              {
+                "correct": "True", 
+                "option": "Xavier initialization"
+              }, 
+              {
+                "correct": "True", 
+                "option": "L2 regularization"
+              }, 
+              {
+                "correct": "True", 
+                "option": "Exploding gradient"
+              }
+            ], 
+            "questionText": [
+              {
+                "text": "Which of these techniques are useful for reducing variance (reducing overfitting)? (Check all that apply.)"
+              }
+            ], 
+            "questionType": "checkbox", 
+            "wrong_feedback": "Incorrect"
+          }, 
+          {
+            "correct_feedback": "Correct.", 
+            "max_marks": "1", 
+            "options": [
+              {
+                "correct": false, 
+                "option": "It makes it easier to visualize the data"
+              }, 
+              {
+                "correct": false, 
+                "option": "It makes the parameter initialization faster"
+              }, 
+              {
+                "correct": "True", 
+                "option": "It makes the cost function faster to optimize"
+              }
+            ], 
+            "questionText": [
+              {
+                "text": "Why do we normalize the inputs x ?"
+              }
+            ], 
+            "questionType": "mcq", 
+            "wrong_feedback": "Incorrect"
+          }
+        ], 
+        "title": "Quiz"
+      }
+    ], 
+    "activity_name": "Quiz-2", 
+    "id": 56, 
+    "module_id": 6
+  }
+]

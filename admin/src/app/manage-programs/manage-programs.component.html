@@ -1,0 +1,38 @@
+<button mat-raised-button color="primary"style="margin:1em" routerLink="/create-program">Create a new program</button>
+<button *ngIf="program_display"mat-raised-button color="primary"(click)="addCourse()"style="margin:1em;float:right;margin-right:2em" >Add Course</button>
+<div *ngIf="programData" style="width:100%;margin: 1em;display: flex" class="mat-typography">
+  <div style="width:40%">
+      <mat-card *ngFor="let program of programData;index as i" class="card">
+          <mat-card-title>{{program.programName}}<button mat-button style="margin-left:2.5em;" (click)=view(program,i)>
+                  <mat-icon style="font-size:1.5em">settings</mat-icon>
+              </button></mat-card-title>
+          <!-- <mat-card-content>{{program.programDescription}}</mat-card-content> -->
+
+      </mat-card>
+      <br>
+  </div>
+  <div *ngIf="program_display" style="margin-left:1em;width:50%">
+      <mat-card class="edit-card">
+         
+        <form class="example-form">
+                      
+            <mat-form-field class="example-full-width">
+              <input matInput placeholder="Program Name" (ngModelChange)="clearFilter()" [(ngModel)]="program_display.programName" name="program Name">
+            </mat-form-field>
+            <div class="mat-typography" style="display:flex"> 
+            <h3>Add Students to this Program </h3>
+            <button mat-button style="margin-left:2.5em;" color="primary" routerLink="/program-invites/student/{{program_display._id}}" >
+                <mat-icon style="font-size:1.5em" >group_add</mat-icon></button></div>
+                <div class="mat-typography" style="display:flex"> 
+                  <h3>Add Mentors to this Program </h3>
+                  <button mat-button style="margin-left:2.5em;" color="primary" routerLink="/program-invites/mentor/{{program_display._id}}" >
+                      <mat-icon style="font-size:1.5em" >group_add</mat-icon></button></div>
+            <div  *ngFor="let course of coursesNames;index as i"> 
+            <app-manage-course *ngIf="courseInstanceNames" [courseObject]="course" [courseInstances]="courseInstanceNames[i]" [program]="program_display" (modified)="update($event)"></app-manage-course>
+          </div>
+          </form>
+      </mat-card>
+  </div>
+ 
+</div>
+<button mat-raised-button color="primary" style="margin: 1em"(click)="persist()">submit</button>

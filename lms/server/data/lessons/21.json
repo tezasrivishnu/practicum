@@ -1,0 +1,70 @@
+[
+  {
+    "activity_json": [
+      {
+        "activityType": "youtubevideo", 
+        "title": "Nature of Intelligence Lecture-1", 
+        "videoURL": "DkHEfZ3_gCI"
+      }, 
+      {
+        "URL": "piazza.com", 
+        "activityType": "discussion", 
+        "title": "Discussion forum"
+      }
+    ], 
+    "activity_name": "Nature of Intelligence Lecture-1", 
+    "id": 29, 
+    "module_id": 21
+  }, 
+  {
+    "activity_json": [
+      {
+        "activityType": "youtubevideo", 
+        "title": "Nature of Intelligence Lecture-2", 
+        "videoURL": "23a3dCveEBU"
+      }, 
+      {
+        "URL": "piazza.com", 
+        "activityType": "discussion", 
+        "title": "Discussion forum"
+      }
+    ], 
+    "activity_name": "Nature of Intelligence Lecture-2", 
+    "id": 27, 
+    "module_id": 21
+  }, 
+  {
+    "activity_json": [
+      {
+        "activityType": "youtubevideo", 
+        "title": "Nature of Intelligence Lecture-3", 
+        "videoURL": "In-w-WcHeiQ"
+      }, 
+      {
+        "URL": "piazza.com", 
+        "activityType": "discussion", 
+        "title": "Discussion forum"
+      }
+    ], 
+    "activity_name": "Nature of Intelligence Lecture-3", 
+    "id": 28, 
+    "module_id": 21
+  }, 
+  {
+    "activity_json": [
+      {
+        "activityType": "youtubevideo", 
+        "title": "Nature of Intelligence Lecture-4", 
+        "videoURL": "LYTT2kRwI3g"
+      }, 
+      {
+        "URL": "piazza.com", 
+        "activityType": "discussion", 
+        "title": "Discussion forum"
+      }
+    ], 
+    "activity_name": "Nature of Intelligence Lecture-4", 
+    "id": 30, 
+    "module_id": 21
+  }
+]

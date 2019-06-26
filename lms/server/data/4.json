@@ -1,0 +1,50 @@
+[
+  {
+    "activities": [
+      "Lecture 17: GANs", 
+      "Lecture 18: GANS part-2", 
+      "Assignment"
+    ], 
+    "desc": null, 
+    "id": 15, 
+    "name": "Generative Adversarial Networks"
+  }, 
+  {
+    "activities": [
+      "Lecture 20: Hopfield Networks 1"
+    ], 
+    "desc": null, 
+    "id": 16, 
+    "name": "Neural Networks Hopfield Nets and Auto Associators"
+  }, 
+  {
+    "activities": [
+      "Lecture 21: Hopfield Networks 2", 
+      "Lecture 22: Boltzmann Machines", 
+      "Assignment"
+    ], 
+    "desc": null, 
+    "id": 17, 
+    "name": "Neural Networks Hopfield Nets and Boltzmann Machines"
+  }, 
+  {
+    "activities": [
+      "Lecture 23: Reinforcement Learning", 
+      "Lecture 24: Reinforcement Learning-II", 
+      "Assignment"
+    ], 
+    "desc": null, 
+    "id": 18, 
+    "name": "Reinforcement Learning-I"
+  }, 
+  {
+    "activities": [
+      "Lecture 25: Reinforcement Learning-3", 
+      "Lecture 27: Reinforcement Learning(3)", 
+      "Lecture 28: Reinforcement Learning(4)"
+    ], 
+    "desc": null, 
+    "id": 19, 
+    "name": "Reinforcement Learning-II"
+  }
+]

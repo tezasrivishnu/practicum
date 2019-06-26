@@ -1,0 +1,45 @@
+<!-- <mat-toolbar color="primary">
+  <h1 style="text-align:center; width: 100%">Admin Panel</h1>
+</mat-toolbar> -->
+
+
+<mat-card class="mat-typography" *ngIf="!flag" style="margin-left:40em;align-items: center;width: 25em;margin-top:10em ">
+  <mat-card-content>
+    <h2 class="example-h2" style="margin-left:15%">Attempting to authenticate</h2>
+
+    <mat-progress-spinner
+        class="example-margin"
+        
+        mode="indeterminate"
+        style="margin-left:28%"
+        >
+    </mat-progress-spinner>
+  </mat-card-content>
+</mat-card>
+
+<div *ngIf="flag" class="container">
+    <button mat-raised-button color="primary" class="holder" routerLink="/invite">
+      <span>Invite Users</span>
+     
+    </button>
+    <button mat-raised-button color="primary" class="holder" routerLink="/modify-catalog">
+      <span>Manage Courses</span>
+     
+    </button>
+
+  <button mat-raised-button color="primary" class="holder" routerLink="/create-program">
+    <span>Create Program</span>
+   
+  </button>
+  <button mat-raised-button color="primary"  class="holder"routerLink="/manage-programs">
+    <span>Manage Programs</span>
+   
+  </button>
+
+
+
+  <button mat-raised-button color="primary" class="holder" routerLink="/mentor-student-allocation" style="width:auto">
+    <span>Assign Instructor</span>
+   
+  </button>
+</div>

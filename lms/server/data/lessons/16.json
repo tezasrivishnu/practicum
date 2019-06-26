@@ -1,0 +1,20 @@
+[
+  {
+    "activity_json": [
+      {
+        "activityType": "youtubevideo", 
+        "title": "Lecture 20: Hopfield Networks 1", 
+        "videoResources": "http://ec2-13-233-148-70.ap-south-1.compute.amazonaws.com/submissions/adv_deep_learning_models/Neural%20Networks%20Hopfield%20Nets%20and%20Auto%20Associators/attachments/lec18.hopfield.pdf", 
+        "videoURL": "YkuC7jfUxVw"
+      }, 
+      {
+        "URL": "piazza.com", 
+        "activityType": "discussion", 
+        "title": "Discussion forum"
+      }
+    ], 
+    "activity_name": "Lecture 20: Hopfield Networks 1", 
+    "id": 18, 
+    "module_id": 16
+  }
+]

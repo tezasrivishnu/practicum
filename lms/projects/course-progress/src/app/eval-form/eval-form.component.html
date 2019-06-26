@@ -1,0 +1,35 @@
+<form [formGroup]="marksFormSubmit">
+  <mat-form-field>
+    <input matInput formControlName="awardedMarks" placeholder="Marks">
+    <mat-error *ngIf="marksFormSubmit.controls.awardedMarks.touched" class="form-error">
+      <p *ngIf="marksFormSubmit.controls.awardedMarks.errors && marksFormSubmit.controls.awardedMarks.errors.required">
+        Marks are required. <br>
+      </p>
+      <p *ngIf="marksFormSubmit.controls.awardedMarks.errors && marksFormSubmit.controls.awardedMarks.errors.max">
+          Maximum mark are {{userResponse.maxMarks}}, You have awarded {{marksFormSubmit.controls.awardedMarks.errors.max.actual}}.  <br>
+      </p>
+    </mat-error>
+  </mat-form-field>
+
+
+  <mat-form-field class="formSubmit">
+    <mat-label>Feedback</mat-label>
+    <textarea style="height:2em" matInput placeholder="" formControlName="feedback"></textarea>
+    <mat-error *ngIf="marksFormSubmit.controls.feedback.touched" class="form-error">
+      <p *ngIf="marksFormSubmit.controls.feedback.errors && marksFormSubmit.controls.feedback.errors.required">
+        Feedback is required.
+      </p>
+    </mat-error>
+  </mat-form-field>
+  <br>
+  <div>
+    <button mat-raised-button color="ThemePalette" (click)="onSubmit()">{{buttonValue}}</button>
+    <mat-error *ngIf="!marksFormSubmit.valid && marksFormSubmit.touched" class="form-error">
+      <p *ngIf="!formStatus">
+        All the fields should be valid
+      </p>
+    </mat-error>
+  </div>
+
+
+</form>

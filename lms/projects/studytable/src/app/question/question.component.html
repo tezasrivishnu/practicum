@@ -1,0 +1,65 @@
+<mat-card class="example-card">
+  <form *ngIf="!latestResponseTime" [formGroup]="form" (submit)="submit(form.value)">
+
+    <mat-card-content>
+      <!-- <div class="question">{{ question.questionText[0].text }}</div> -->
+      <div class="question" [innerHTML]="question.questionText[0].text"></div>
+      <div *ngIf='question.questionText[1]'>
+        <img mat-card-image [src]='question.questionText[1].image.imageSRC'>
+      </div>
+      <ng-container *ngFor="let c of form.get('choices')['controls']; let i = index">
+        <div class="choice">
+          <mat-checkbox [formControl]="c"><span [innerHTML]='question.options[i].option'></span></mat-checkbox>
+        </div>
+      </ng-container>
+      <mat-card-subtitle *ngIf="show" [style.color]="isValid ? 'green': 'red'"><span [innerHTML]='this.feedback'></span></mat-card-subtitle>
+    </mat-card-content>
+    <div *ngIf="emptySubmission" style="color:red">
+      Please check any option and submit
+    </div>
+    <mat-card-actions>
+      <button mat-button color="accent" type="submit">Submit Answer</button>
+      <!-- <span *ngIf ="ack" >&nbsp;&nbsp;&nbsp; Response stored successfully</span> -->
+
+    </mat-card-actions>
+    <div *ngIf="latestResponseTime" class="container">
+      <span class="timestamp"> Submitted at: &nbsp;&nbsp;&nbsp;{{showTimestamp(latestResponseTime)}}</span>
+    </div>
+
+  </form>
+
+  <form *ngIf="latestResponseTime" [formGroup]="formTryAgain" (submit)="tryAgain()">
+
+    <mat-card-content>
+      <!-- <div class="question">{{ question.questionText[0].text }}</div> -->
+      <div class="question" [innerHTML]="question.questionText[0].text"></div>
+      <div *ngIf='question.questionText[1]'>
+        <img mat-card-image [src]='question.questionText[1].image.imageSRC'>
+      </div>
+      <ng-container *ngFor="let c of form.get('choices')['controls']; let i = index">
+        <div class="choice">
+          <mat-checkbox [ngModel]="userResponse.response.choices[i].selected" [disabled]="true" [formControl]="c"><span
+              [innerHTML]='question.options[i].option'></span></mat-checkbox>
+        </div>
+      </ng-container>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button color="accent" type="submit">Try Again</button>
+      <!-- <span *ngIf ="ack" >&nbsp;&nbsp;&nbsp; Response stored successfully</span> -->
+
+
+    </mat-card-actions>
+    <div>
+      <mat-card-subtitle [style.color]="isValid ? 'green': 'red'"><span [innerHTML]='this.feedback'></span></mat-card-subtitle>
+      <mat-card-subtitle *ngIf="isValid" [style.color]="isValid ? 'green': 'red'"><b>Correct answer! You have earned {{this.userResponse.maxMarks}} points.</b></mat-card-subtitle>
+    </div>
+
+    <!-- <div>
+        <p  [style.color]="this.userResponse.result ? 'green': 'red'">{{ this.userAnswer }}</p>
+    </div> -->
+    <div *ngIf="latestResponseTime" class="container">
+      <p class="timestamp"> Submitted at: &nbsp;&nbsp;&nbsp;{{showTimestamp(latestResponseTime)}}</p>
+    </div>
+
+  </form>
+</mat-card>

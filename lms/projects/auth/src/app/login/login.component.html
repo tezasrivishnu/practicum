@@ -1,0 +1,39 @@
+<div class="container mat-typography">
+  <mat-card class="my-card">
+    <img class="pic" src="/assets/innosential_lms_course_and_instructor_images/innosential-logo-updated.png">
+    <br>
+    <h2 style="text-align: center">Sign in</h2>
+    <br>
+    <mat-card-content style="width:80%">
+      <form [formGroup]="myForm" class="my-form" (keyup.enter)="onSubmit($event)">
+        <mat-form-field class="full-width">
+
+          <input matInput placeholder="Email" name="email" formControlName="email">
+          <mat-error *ngIf="!myForm.controls['email'].valid && myForm.controls['email'].touched">
+            <span *ngIf="myForm.controls['email'].errors.pattern">
+              Please enter a valid email address.
+            </span>
+            <span *ngIf="myForm.controls['email'].errors.required">
+                This field is required.
+            </span>
+          </mat-error>
+        </mat-form-field>
+        <br>
+        <mat-form-field class="full-width">
+
+          <input matInput placeholder="Password" type="password" name="password" formControlName="password">
+          <mat-error *ngIf="(!myForm.controls['password'].valid && myForm.controls['password'].touched)  ">
+            <span>This field is required</span>
+          </mat-error>
+        </mat-form-field>
+      </form>
+    </mat-card-content>
+    <a routerLink="/auth/forgot-password" style="align-self: flex-end">Forgot Password?</a>
+    <mat-card-actions>
+      <button mat-raised-button (click)="onSubmit($event)" color="primary" type="submit">LOGIN</button>
+    </mat-card-actions>
+    <mat-error *ngIf="errorress!=''">
+      {{errorress}}
+    </mat-error>
+  </mat-card>
+</div>

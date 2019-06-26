@@ -1,0 +1,38 @@
+<mat-card class="card">
+  <mat-toolbar color="primary"><p style="text-align:center; width: 100%">Create Course</p></mat-toolbar>
+  <form [formGroup]="courseForm" #formDirective="ngForm" (ngSubmit)="onSubmit(formDirective)">
+    <div class="container">
+      <mat-form-field>
+        <input matInput formControlName="courseID" placeholder="Enter course ID">
+        <mat-error *ngIf="form.courseID.errors && form.courseID.touched">This is a required field</mat-error>
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput formControlName="courseName" placeholder="Enter course name">
+        <mat-error *ngIf="form.courseName.errors && form.courseName.touched">This is a required field</mat-error>
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput formControlName="courseDescription" placeholder="Enter course description">
+        <mat-error *ngIf="form.courseDescription.errors && form.courseDescription.touched">This is a required field
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-select  placeholder="Select course instructor" formControlName="courseInstructor" multiple>
+          <mat-select-trigger>
+            {{form.courseInstructor.value ? instructorDisplay : ''}}
+            <span *ngIf="form.courseInstructor.value?.length > 1" class="example-additional-selection">
+              (+{{form.courseInstructor.value.length - 1}} {{form.courseInstructor.value?.length === 2 ? 'other' : 'others'}})
+            </span>
+          </mat-select-trigger>
+          <mat-option *ngFor="let mentor of mentorsList" [value]="mentor._id">
+            {{ mentor.firstName + ' ' + mentor.lastName }}</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <button mat-raised-button color="primary" [disabled]="!courseForm.valid">Submit</button>
+
+      <h3 style="text-align:center" [style.color]="messageType=='success'? 'green': 'red'" >{{ message }}</h3>
+    </div>
+  </form>
+</mat-card>

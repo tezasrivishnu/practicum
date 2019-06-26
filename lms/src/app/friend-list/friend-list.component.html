@@ -1,0 +1,11 @@
+<div class="d-flex flex-row border rounded">
+    <div class="p-0 w-25">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS52y5aInsxSm31CvHOFHWujqUx_wWTS9iM6s7BAm21oEN_RiGoog" class="img-thumbnail border-0" />
+    </div>
+    <div class="pl-3 pt-2 pr-2 pb-2 w-75 border-left">
+        <h4 class="text-primary">{{item.firstName}} {{item.lastName}}</h4>
+        <h5 class="text-info">{{item.userID}}</h5>
+        <p class="text-right m-0"><a routerLink="/classmate-profile/{{item._id}}" class="btn btn-primary"><i class="fa fa-user"></i> View Profile</a></p>
+    </div>
+</div>
+

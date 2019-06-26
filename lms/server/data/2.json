@@ -1,0 +1,68 @@
+[
+  {
+    "activities": [
+      "Lecture 1: Introduction to Deep Learning", 
+      "Quiz"
+    ], 
+    "desc": null, 
+    "id": 1, 
+    "name": "Neural Networks"
+  }, 
+  {
+    "activities": [
+      "Lecture 2: The Neural as an Universal Approximator", 
+      "Assignment", 
+      "Quiz"
+    ], 
+    "desc": null, 
+    "id": 2, 
+    "name": "Neural Networks What can a network represent"
+  }, 
+  {
+    "activities": [
+      "Lecture 3: Neural Network Training", 
+      "Quiz"
+    ], 
+    "desc": null, 
+    "id": 3, 
+    "name": "Learning the Network Part 1"
+  }, 
+  {
+    "activities": [
+      "Lecture 4: BackPropagation", 
+      "Lecture 5: BackPropagation Contd", 
+      "Assignment", 
+      "Quiz"
+    ], 
+    "desc": null, 
+    "id": 4, 
+    "name": "Learning the Network Backdrop"
+  }, 
+  {
+    "activities": [
+      "Lecture 6: Optimization Part-1"
+    ], 
+    "desc": null, 
+    "id": 5, 
+    "name": "Neural Networks Optimization Part 1"
+  }, 
+  {
+    "activities": [
+      "Lecture 7: Optimization Part-2", 
+      "Assignment", 
+      "Quiz-1", 
+      "Quiz-2"
+    ], 
+    "desc": null, 
+    "id": 6, 
+    "name": "Neural Networks Optimization"
+  }, 
+  {
+    "activities": [
+      "Lecture 8: Conolutional Neural Networks(Part-1)"
+    ], 
+    "desc": null, 
+    "id": 7, 
+    "name": "Deep Neural Networks Scanning for patterns (aka convolutional networks)"
+  }
+]

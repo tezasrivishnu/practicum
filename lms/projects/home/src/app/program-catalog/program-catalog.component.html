@@ -1,0 +1,7 @@
+<div class="container">
+  <div *ngFor = "let program of enrolledPrograms, index as i" class="vertical" >
+      <mat-card   class="card" (click)="goToProgramHome(program._id, i)">{{program.programName}}</mat-card>
+  </div>
+  
+</div>
+

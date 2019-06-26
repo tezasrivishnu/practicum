@@ -1,0 +1,68 @@
+[
+  {
+    "activity_json": [
+      {
+        "activityType": "youtubevideo", 
+        "title": "Lecture 17: GANS", 
+        "videoResources": "http://ec2-13-233-148-70.ap-south-1.compute.amazonaws.com/submissions/adv_deep_learning_models/Generative%20Adversarial%20Networks/attachments/lec17.GANs.pdf", 
+        "videoURL": "t20wb9FUMHk"
+      }, 
+      {
+        "URL": "piazza.com", 
+        "activityType": "discussion", 
+        "title": "Discussion forum"
+      }
+    ], 
+    "activity_name": "Lecture 17: GANs", 
+    "id": 17, 
+    "module_id": 15
+  }, 
+  {
+    "activity_json": [
+      {
+        "activityType": "youtubevideo", 
+        "title": "Lecture 18: GANS part-2", 
+        "videoURL": "40Z5rFIcxZg"
+      }, 
+      {
+        "URL": "piazza.com", 
+        "activityType": "discussion", 
+        "title": "Discussion forum"
+      }
+    ], 
+    "activity_name": "Lecture 18: GANS part-2", 
+    "id": 44, 
+    "module_id": 15
+  }, 
+  {
+    "activity_json": [
+      {
+        "activityType": "assignment", 
+        "questions": [
+          {
+            "questionText": [
+              {
+                "text": "Please find the pdf and  zip file"
+              }, 
+              {
+                "attachment": [
+                  "http://ec2-13-233-148-70.ap-south-1.compute.amazonaws.com/submissions/adv_deep_learning_models/Generative%20Adversarial%20Networks/attachments/rec10.vae.pdf"
+                ]
+              }, 
+              {
+                "attachment": [
+                  "http://ec2-13-233-148-70.ap-south-1.compute.amazonaws.com/submissions/adv_deep_learning_models/Generative%20Adversarial%20Networks/attachments/recitation-10.zip"
+                ]
+              }
+            ], 
+            "questionType": "filesubmission"
+          }
+        ], 
+        "title": "Assignment"
+      }
+    ], 
+    "activity_name": "Assignment", 
+    "id": 45, 
+    "module_id": 15
+  }
+]

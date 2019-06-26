@@ -1,0 +1,138 @@
+<mat-toolbar color="primary" class="heading-name">
+  <span class="fill-remaining-space ">LMS User Registration</span>
+</mat-toolbar>
+
+<div class="container" *ngIf="!post; else forminfo">
+  <mat-card *ngIf="user.userId != ''">
+    <form [formGroup]="formGroup" class="form">
+      <mat-horizontal-stepper #linearHorizontalStepper="matHorizontalStepper" formArrayName="formArray" [linear]="false">
+        <mat-step formGroupName="0" [stepControl]="formGroup.get('formArray')['controls'][0]">
+          <mat-form-field class="form-element" required>
+            <input matInput placeholder="email address" formControlName="email">
+          </mat-form-field>
+          <mat-form-field class="form-element" required>
+            <input matInput placeholder="user id" formControlName="userID">
+          </mat-form-field>
+          <mat-form-field class="form-element" required>
+            <input matInput placeholder="role" formControlName="role">
+          </mat-form-field>
+          <div class='form-elements'>
+            <mat-form-field required class="inner-form-element">
+              <input matInput name="firstName" placeholder="First name" formControlName="firstName">
+              <mat-error *ngIf="checkTouched(0, 'firstName') && !checkValid(0, 'firstName')">
+                First name required
+              </mat-error>
+            </mat-form-field>
+            &nbsp;
+            <mat-form-field required class="inner-form-element">
+              <input matInput name="lastName" placeholder="Last name" formControlName="lastName">
+              <mat-error *ngIf="checkTouched(0, 'lastName') && !checkValid(0, 'lastName')">
+                Last name required
+              </mat-error>
+            </mat-form-field>
+          </div>
+          <mat-form-field class="form-element" matTooltip="{{ tip }}" matTooltipPosition="after" required>
+            <input matInput name="password" placeholder="Password" type="password" formControlName="password">
+            <mat-error *ngIf="checkTouched(0, 'password') && checkErrors(0, 'password')">
+              <p *ngIf="checkRequired(0, 'password')">Password required</p>
+              <p *ngIf="checkPattern(0, 'password')">Password should match pattern</p>
+            </mat-error>
+          </mat-form-field>
+          <mat-form-field class="form-element" required>
+            <input matInput name="confirmPassword" placeholder="Confirm password" type="password" formControlName="confirmPassword">
+              <mat-error *ngIf="checkTouched(0, 'confirmPassword') && checkErrors(0, 'confirmPassword')">
+                <p *ngIf="checkRequired(0, 'confirmPassword')"> Confirm password required </p>
+                <p *ngIf="checkMustMatch()">Both password should match</p>
+              </mat-error>
+          </mat-form-field>
+          <div class='form-elements'>
+            <mat-form-field required  class="inner-form-element">
+              <input name="dateOfBirth" formControlName="dateOfBirth" matInput [matDatepicker]="picker" placeholder="Date of birth">
+              <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+              <mat-datepicker #picker></mat-datepicker>
+              <mat-error *ngIf="checkTouched(0, 'dateOfBirth') && !checkValid(0, 'dateOfBirth')">
+                Date of birth required
+              </mat-error>
+            </mat-form-field>
+            &nbsp;
+            <mat-form-field required  class="inner-form-element">
+              <mat-select formControlName="gender" placeholder="Gender">
+                <mat-option value="male">Male</mat-option>
+                <mat-option value="female">Female</mat-option>
+                <mat-option value="other">other</mat-option>
+              </mat-select>
+              <mat-error *ngIf="checkTouched(0, 'gender') && !checkValid(0, 'gender')">
+                Gender required
+              </mat-error>
+            </mat-form-field>
+          </div>
+          <div style="text-align: right;">
+            <button mat-raised-button matStepperNext type="button">Next</button>
+          </div>
+        </mat-step>
+        
+        <mat-step formGroupName="1" [stepControl]="formGroup.get('formArray')['controls'][1]">
+          <div class="form-element" style='display: flex; flex-flow: row wrap; justify-content: space-between'>
+              <div>
+                <button mat-raised-button color="primary" type="button" (click)="openCaptureModal()">Capture photo</button>
+              </div>    
+              <div>
+                <button mat-raised-button color="primary" type="button" (click)="openUploadModal()">Upload Photo</button>
+              </div> 
+          </div> 
+          <br>
+          <img *ngIf="capture" src="{{ capture }}" width="100%"/>
+          <br>
+          <div style='display: flex; flex-flow: row wrap; justify-content: space-between'>
+            <button mat-raised-button matStepperPrevious type="button">Back</button>
+            <button mat-raised-button matStepperNext type="button">Next</button>
+          </div>
+        </mat-step>
+
+        <mat-step formGroupName="2" [stepControl]="formGroup.get('formArray')['controls'][2]">
+          <div style="display:flex">
+            <mat-form-field class="form-element" required style="flex-grow: 9">
+              <span matPrefix>+91&nbsp;</span>
+              <input matInput formControlName="phoneNo" length="10" placeholder="Phone number">
+              <mat-error>
+                <p *ngIf="checkTouched(2, 'phoneNo') && checkRequired(2, 'phoneNo')">Phone number required</p>
+                <p *ngIf="checkPattern(2, 'phoneNo')">Phone number should contain 10 numbers</p>
+                <p *ngIf="checkOtpNotVerified()">OTP not verified</p>
+              </mat-error>
+            </mat-form-field>
+            <div style="flex-grow: 1">
+              <button [disabled]="subscribeTimer > 0 || otpCheck || checkPattern(2, 'phoneNo')" mat-raised-button color="primary" type="button" (click)="sendOTP()" >Get OTP</button>
+            </div>  
+            <div *ngIf="subscribeTimer && !otpCheck" style="margin:2.5%;font-size:13px;color:red">
+              Please wait for {{subscribeTimer}} seconds
+            </div>
+          </div>
+          <br>
+          <div>
+            <button *ngIf='clicked && !otpCheck' mat-raised-button color="primary" type="button" (click)="openOtpVerificationModal()" >Verify OTP</button>
+          </div>
+          <br>
+          <div class="form-element">
+            <button mat-raised-button color="primary" type="button" (click)="onSubmit(formGroup.value)"  class="button">Register</button>
+            <div *ngIf="!formGroup.valid" style="font-size:12px;color:red">Required fields are missing <br></div>
+          </div>
+          <br>
+          <div>
+            <button mat-raised-button matStepperPrevious type="button">Back</button>
+          </div>
+        </mat-step>
+      </mat-horizontal-stepper>
+    </form>
+  </mat-card>
+</div>
+<ng-template #forminfo>
+  <div class="container">
+    <mat-card *ngIf="error==403" style="display: inline-block;">This invitation could has already been used. <a routerLink='/auth/login/home'>click here</a> to login if you have a username and password. Otherwise contact support for new invitation link.</mat-card>
+    <mat-card *ngIf="!error" style="display: inline-block;">Registration completed successfully, <a routerLink='/auth/login/home'>click here</a> to login</mat-card>
+  </div>
+</ng-template>
+
+
+
+
+<!-- <button mat-raised-button color="primary" type="button" (click)="check()">check</button> -->

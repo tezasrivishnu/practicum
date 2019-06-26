@@ -1,0 +1,402 @@
+[
+  {
+    "activity_json": [
+      {
+        "activityType": "youtubevideo", 
+        "title": "Lecture 4: BackPropagation", 
+        "videoResources": "http://ec2-13-233-148-70.ap-south-1.compute.amazonaws.com/submissions/intro_to_deep_learning/Learning%20the%20Network%20Backdrop/attachments/lec4.learning.pdf", 
+        "videoURL": "wx9agFfOtpA"
+      }, 
+      {
+        "URL": "piazza.com", 
+        "activityType": "discussion", 
+        "title": "Discussion forum"
+      }
+    ], 
+    "activity_name": "Lecture 4: BackPropagation", 
+    "id": 4, 
+    "module_id": 4
+  }, 
+  {
+    "activity_json": [
+      {
+        "activityType": "youtubevideo", 
+        "title": "Lecture 5: BackPropagation Contd", 
+        "videoResources": "http://ec2-13-233-148-70.ap-south-1.compute.amazonaws.com/submissions/intro_to_deep_learning/Learning%20the%20Network%20Backdrop/attachments/lec4.learning.pdf", 
+        "videoURL": "4nmF2mNs3mw"
+      }, 
+      {
+        "URL": "piazza.com", 
+        "activityType": "discussion", 
+        "title": "Discussion forum"
+      }
+    ], 
+    "activity_name": "Lecture 5: BackPropagation Contd", 
+    "id": 5, 
+    "module_id": 4
+  }, 
+  {
+    "activity_json": [
+      {
+        "activityType": "assignment", 
+        "questions": [
+          {
+            "questionText": [
+              {
+                "text": "Please find the pdf and  zip file"
+              }, 
+              {
+                "attachment": [
+                  "http://ec2-13-233-148-70.ap-south-1.compute.amazonaws.com/submissions/intro_to_deep_learning/Learning%20the%20Network%20Backdrop/attachments/rec3.pdf"
+                ]
+              }, 
+              {
+                "attachment": [
+                  "http://ec2-13-233-148-70.ap-south-1.compute.amazonaws.com/submissions/intro_to_deep_learning/Learning%20the%20Network%20Backdrop/attachments/recitation-3.zip"
+                ]
+              }
+            ], 
+            "questionType": "filesubmission"
+          }
+        ], 
+        "title": "Assignment"
+      }
+    ], 
+    "activity_name": "Assignment", 
+    "id": 37, 
+    "module_id": 4
+  }, 
+  {
+    "activity_json": [
+      {
+        "activityType": "quiz", 
+        "questions": [
+          {
+            "correct_feedback": "Correct", 
+            "max_marks": "1", 
+            "options": [
+              {
+                "correct": true, 
+                "option": "a<sup>[2](12)</sup> denotes the activation vector of the 2<sup>nd</sup> layer for the 12<sup>th</sup> training example."
+              }, 
+              {
+                "correct": true, 
+                "option": "X is a matrix in which each column is one training example."
+              }, 
+              {
+                "correct": true, 
+                "option": "a<sup>[2](12)</sup> denotes activation vector of the 12<sup>th</sup> layer on the 2<sup>nd</sup> training example"
+              }, 
+              {
+                "correct": true, 
+                "option": "a<sup>[2]</sup><sub>4</sub> is the activation output of the 2<sup>nd</sup> layer for the 4<sup>th</sup> training example"
+              }, 
+              {
+                "correct": true, 
+                "option": "a<sup>[2]</sup>denotes the activation vector of the 2<sup>nd</sup> layer."
+              }, 
+              {
+                "correct": true, 
+                "option": "a<sup>[2]</sup><sub>4</sub> is the activation output by the 4<sup>th</sup> neuron of the 2<sup>nd</sup> layer"
+              }, 
+              {
+                "correct": true, 
+                "option": "X is a matrix in which each row is one training example."
+              }
+            ], 
+            "questionText": [
+              {
+                "text": "Which of the following are true? (Check all that apply.)"
+              }
+            ], 
+            "questionType": "checkbox", 
+            "wrong_feedback": "Incorrect."
+          }, 
+          {
+            "correct_feedback": "Correct, Yes. As seen in lecture the output of the tanh is between -1 and 1, it thus centers the data which makes the learning simpler for the next layer.", 
+            "max_marks": "1", 
+            "options": [
+              {
+                "correct": true, 
+                "option": "True"
+              }, 
+              {
+                "correct": false, 
+                "option": "False"
+              }
+            ], 
+            "questionText": [
+              {
+                "text": "The tanh activation usually works better than sigmoid activation function for hidden units because the mean of its output is closer to zero, and so it centers the data better for the next layer. True/False?"
+              }
+            ], 
+            "questionType": "mcq", 
+            "wrong_feedback": "Incorrect"
+          }, 
+          {
+            "correct_feedback": "correct", 
+            "max_marks": "1", 
+            "options": [
+              {
+                "correct": false, 
+                "option": "z<sup>[l]</sup>=Wsup>[l-1]</sup>A<sup>[l]</sup>+b<sup>[l-1]<br>A<sup>[l+1]</sup>=g<sup>[l]</sup>(Z<sup>[l]</sup>)"
+              }, 
+              {
+                "correct": false, 
+                "option": "z<sup>[l]</sup>=Wsup>[l]</sup>A<sup>[l]</sup>+b<sup>[l]<br>A<sup>[l]</sup>=g<sup>[l]</sup>(Z<sup>[l]</sup>)"
+              }, 
+              {
+                "correct": false, 
+                "option": "z<sup>[l]</sup>=Wsup>[l]</sup>A<sup>[l]</sup>+b<sup>[l]<br>A<sup>[l+1]</sup>=g<sup>[l+1]</sup>(Z<sup>[l]</sup>)"
+              }, 
+              {
+                "correct": true, 
+                "option": "z<sup>[l]</sup>=Wsup>[l]</sup>A<sup>[l-1]</sup>+b<sup>[l]<br>A<sup>[l]</sup>=g<sup>[l]</sup>(Z<sup>[l]</sup>)"
+              }
+            ], 
+            "questionText": [
+              {
+                "text": "Which of these is a correct vectorized implementation of forward propagation for layer l , where 1 \u2264 l \u2264 L ?"
+              }
+            ], 
+            "questionType": "mcq", 
+            "wrong_feedback": "Incorrect"
+          }, 
+          {
+            "correct_feedback": "Correct. Yes. Sigmoid outputs a value between 0 and 1 which makes it a very good choice for binary classi cation. You can classify as 0 if the output is less than 0.5 and classify as 1 if the output is more than 0.5. It can be done with tanh as well but it is less convenient as the output is between -1 and 1.", 
+            "max_marks": "1", 
+            "options": [
+              {
+                "correct": false, 
+                "option": "ReLU"
+              }, 
+              {
+                "correct": false, 
+                "option": "Leaky ReLU"
+              }, 
+              {
+                "correct": true, 
+                "option": "sigmoid"
+              }, 
+              {
+                "correct": false, 
+                "option": "tanh"
+              }
+            ], 
+            "questionText": [
+              {
+                "text": "You are building a binary classifier for recognizing cucumbers (y=1) vs. watermelons (y=0). Which one of these activation functions would you recommend using for the output layer?"
+              }
+            ], 
+            "questionType": "mcq", 
+            "wrong_feedback": "Incorrect"
+          }, 
+          {
+            "correct_feedback": "Correct. Yes, we use (keepdims = True) to make sure that A.shape is (4,1) and not (4, ). It makes our code more rigorous.", 
+            "max_marks": "1", 
+            "options": [
+              {
+                "correct": false, 
+                "option": "(, 3)"
+              }, 
+              {
+                "correct": false, 
+                "option": "(4, )"
+              }, 
+              {
+                "correct": false, 
+                "option": "(1, 3)"
+              }, 
+              {
+                "correct": true, 
+                "option": "(4, 1)"
+              }
+            ], 
+            "questionText": [
+              {
+                "text": "Consider the following code:"
+              }, 
+              {
+                "image": {
+                  "imageName": "", 
+                  "imageSRC": "http://ec2-13-233-148-70.ap-south-1.compute.amazonaws.com/content/intro_to_deep_learning/Learning%20the%20Network%20Backdrop/attachments/image-1.png"
+                }
+              }, 
+              {
+                "text": "What will be B.shape? (If you\u2019re not sure, feel free to run this in python to nd out)."
+              }
+            ], 
+            "questionType": "mcq", 
+            "wrong_feedback": "Incorrect"
+          }, 
+          {
+            "correct_feedback": "Correct ", 
+            "max_marks": "1", 
+            "options": [
+              {
+                "correct": true, 
+                "option": "Each neuron in the first hidden layer will perform the same computation. So even after multiple iterations of gradient descent each neuron in the layer will be computing the same thing as other neurons."
+              }, 
+              {
+                "correct": false, 
+                "option": "Each neuron in the first hidden layer will perform the same computation in the rst iteration. But after one iteration of gradient descent they will learn to compute di erent things because we have \"broken symmetry\"."
+              }, 
+              {
+                "correct": false, 
+                "option": "Each neuron in the first hidden layer will compute the same thing, but neurons in different layers will compute different things, thus we have accomplished \u201csymmetry breaking\u201d as described in lecture."
+              }, 
+              {
+                "correct": false, 
+                "option": "The first hidden layer\u2019s neurons will perform di erent computations from each other even in the rst iteration; their parameters will thus keep evolving in their own way."
+              }
+            ], 
+            "questionText": [
+              {
+                "text": "Suppose you have built a neural network. You decide to initialize the weights and biases to be zero. Which of the following statements are True? (Check all that apply)"
+              }
+            ], 
+            "questionType": "mcq", 
+            "wrong_feedback": "Incorrect"
+          }, 
+          {
+            "correct_feedback": "Correct. Yes, Logistic Regression doesn't have a hidden layer. If you initialize the weights to zeros, the rst example x fed in the logistic regression will output zero but the derivatives of the Logistic Regression depend on the input x (because there's no hidden layer) which is not zero. So at the second iteration, the weights values follow x's distribution and are di erent from each other if x is not a constant vector.", 
+            "max_marks": "1", 
+            "options": [
+              {
+                "correct": false, 
+                "option": "True"
+              }, 
+              {
+                "correct": true, 
+                "option": "False"
+              }
+            ], 
+            "questionText": [
+              {
+                "text": "Logistic regression\u2019s weights w should be initialized randomly rather than to all zeros, because if you initialize to all zeros, then logistic regression will fail to learn a useful decision boundary because it will fail to \"break symmetry\", True/False?"
+              }
+            ], 
+            "questionType": "mcq", 
+            "wrong_feedback": "Incorrect"
+          }, 
+          {
+            "correct_feedback": "Correct. Yes. tanh becomes at for large values, this leads its gradient to be close to zero. This slows down the optimization algorithm.", 
+            "max_marks": "1", 
+            "options": [
+              {
+                "correct": false, 
+                "option": "It doesn\u2019t matter. So long as you initialize the weights randomly gradient descent is not affected by whether the weights are large or small."
+              }, 
+              {
+                "correct": false, 
+                "option": "This will cause the inputs of the tanh to also be very large, thus causing gradients to also become large. You therefore have to set \u03b1 to be very small to prevent divergence; this will slow down learning."
+              }, 
+              {
+                "correct": true, 
+                "option": "This will cause the inputs of the tanh to also be very large, thus causing radients to be close to zero. The optimization algorithm will thus become slow."
+              }, 
+              {
+                "correct": false, 
+                "option": "This will cause the inputs of the tanh to also be very large, causing the units to be \"highly activated\" and thus speed up learning compared to if the weights had to start from small values."
+              }
+            ], 
+            "questionText": [
+              {
+                "text": "You have built a network using the tanh activation for all the hidden units. You initialize the weights to relative large values, using np.random.randn(..,..)*1000. What will happen?"
+              }
+            ], 
+            "questionType": "mcq", 
+            "wrong_feedback": "Incorrect"
+          }, 
+          {
+            "correct_feedback": "Correct.", 
+            "max_marks": "1", 
+            "options": [
+              {
+                "correct": true, 
+                "option": "W<sup>[1]</sup>will have shape (2, 4)"
+              }, 
+              {
+                "correct": false, 
+                "option": "b<sup>[1]</sup>will have shape (4, 1)"
+              }, 
+              {
+                "correct": true, 
+                "option": "W<sup>[1]</sup>will have shape (4, 2)"
+              }, 
+              {
+                "correct": true, 
+                "option": "b<sup>[1]</sup>will have shape (2, 1)"
+              }, 
+              {
+                "correct": false, 
+                "option": "W<sup>[2]</sup>will have shape (1, 4)"
+              }, 
+              {
+                "correct": true, 
+                "option": "b<sup>[2]</sup>will have shape (4, 1)"
+              }, 
+              {
+                "correct": true, 
+                "option": "W<sup>[2]</sup>will have shape (4, 1)"
+              }, 
+              {
+                "correct": false, 
+                "option": "b<sup>[2]</sup>will have shape (1, 1)"
+              }
+            ], 
+            "questionText": [
+              {
+                "text": "Consider the following 1 hidden layer neural network:"
+              }, 
+              {
+                "image": {
+                  "imageName": "", 
+                  "imageSRC": "http://ec2-13-233-148-70.ap-south-1.compute.amazonaws.com/content/intro_to_deep_learning/Learning%20the%20Network%20Backdrop/attachments/image-2.png"
+                }
+              }, 
+              {
+                "text": "Which of the following statements are True? (Check all that apply)."
+              }
+            ], 
+            "questionType": "checkbox", 
+            "wrong_feedback": "Incorrect"
+          }, 
+          {
+            "correct_feedback": "Correct.", 
+            "max_marks": "1", 
+            "options": [
+              {
+                "correct": false, 
+                "option": "Z<sup>[1]</sup> and A<sup>[1]</sup> are (1,4)"
+              }, 
+              {
+                "correct": false, 
+                "option": "Z<sup>[1]</sup> and A<sup>[1]</sup> are (4,1)"
+              }, 
+              {
+                "correct": false, 
+                "option": "Z<sup>[1]</sup> and A<sup>[1]</sup> are (4,2)"
+              }, 
+              {
+                "correct": false, 
+                "option": "Z<sup>[1]</sup> and A<sup>[1]</sup> are (4,m)"
+              }
+            ], 
+            "questionText": [
+              {
+                "text": "In the same network as the previous question, what are the dimensions of Z <sup>[1]</sup> and A <sup>[1]</sup>?"
+              }
+            ], 
+            "questionType": "mcq", 
+            "wrong_feedback": "Incorrect"
+          }
+        ], 
+        "title": "Quiz"
+      }
+    ], 
+    "activity_name": "Quiz", 
+    "id": 51, 
+    "module_id": 4
+  }
+]

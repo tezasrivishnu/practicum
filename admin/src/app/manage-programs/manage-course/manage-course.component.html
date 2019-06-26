@@ -1,0 +1,12 @@
+<mat-card  style="margin:2em">
+  <mat-card-title>{{courseObject.courseName}}<button mat-button color="primary" style="float:right;width: 0.5em"><mat-icon style="float:right;width: 100%" (click)=createCourseInstance()>add_box</mat-icon></button></mat-card-title>
+  <mat-card-content *ngIf="courseObject" class="displaycard">
+    <div *ngFor="let instance of courseInstances;index as i">
+    <mat-card *ngIf="instance" style="margin:1em;width: 85%" >
+     <mat-card-title *ngIf="instance"> {{instance.courseInstanceLabel}}</mat-card-title>
+      <mat-slide-toggle *ngIf="courseInstances[i]"style="margin:1em;align-self: right;margin-left: 2em" color="primary" [(checked)]="courseInstances[i].isLive" disabled="true" (change)="update(i)">Is Live?</mat-slide-toggle>
+     
+    </mat-card>
+  </div>
+  </mat-card-content>
+</mat-card>

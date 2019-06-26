@@ -1,0 +1,15 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+      <span id="title" ></span>
+      <button  mat-button *ngIf="username " (click)="routeToHome()"><mat-icon class="example-icon">home</mat-icon></button>
+      
+      <span *ngIf="username " class="example-spacer">{{pgname()}}</span>
+      <button mat-button *ngIf="username " (click)="routeToCourseProgress()"> Course Progress</button>
+      <button mat-button routerLink="/credits"> Credits</button>
+
+      <button *ngIf="username " routerLink="/user" mat-button>{{username}} <mat-icon class="example-icon">account_circle</mat-icon></button>
+      
+      <button  mat-button *ngIf="username " (click)="log()"><mat-icon class="example-icon">logout</mat-icon></button>
+      
+    </mat-toolbar-row>
+</mat-toolbar>

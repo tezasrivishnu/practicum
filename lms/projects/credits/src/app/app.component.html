@@ -1,0 +1,5 @@
+<h1 style="text-align: center">Developers</h1>
+<div fxLayout="row" fxLayoutAlign="space-around center">
+    <app-credits-page *ngFor="let dataItem of dataList; index as index" [dataItem]="dataItem" [index]="index"></app-credits-page>
+    
+</div>

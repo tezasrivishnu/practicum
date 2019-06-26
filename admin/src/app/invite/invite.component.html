@@ -1,0 +1,19 @@
+
+
+<div class="flex-container" style="margin-bottom: 1em;">
+    <mat-card style="width:45%">
+      <app-invite-status class="flex-container-1"></app-invite-status>
+    </mat-card>
+    <mat-card style="width:45%">
+      <app-batch-invite class="flex-container-1"></app-batch-invite>
+    </mat-card>
+</div>
+
+<div *ngIf="errorDataVisibility" style="display: flex; justify-content: space-around; margin-top: 0.5em">
+  <mat-card style="width:94%">
+    <app-invite-error></app-invite-error>
+  </mat-card>
+</div>
+
+<div class="spinner-background" *ngIf="loading"></div>
+<mat-spinner class="spinner" *ngIf="loading"></mat-spinner>

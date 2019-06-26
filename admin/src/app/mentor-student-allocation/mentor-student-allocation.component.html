@@ -1,0 +1,37 @@
+<form [formGroup]="batchesForm">
+  <mat-form-field>
+    <mat-label>Select Program</mat-label>
+    <mat-select formControlName="programName">
+      <mat-option *ngFor="let program of programs; index as programIndex" [value]="program._id">
+        {{program.programName}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Select Course</mat-label>
+    <mat-select formControlName="courseName">
+      <mat-option *ngFor="let course of courses; index as courseIndex" [value]="course._id">
+        {{course.courseName}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  <mat-form-field>
+      <mat-label>Select Course Instance ID</mat-label>
+      <mat-select formControlName="courseInstanceID">
+        <mat-option *ngFor="let courseInstance of courseInstances" [value]="courseInstance">
+          {{courseInstance.courseInstanceLabel  }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+</form>
+
+<div class="dropzone" *ngIf="dropZoneDisplay" appDnd (loadingStatus)="loadingSwitch($event)" (batchesData)="loadData($event)" [courseInstanceID]="courseInstanceID"  [programID]="programID" [courseID]="courseID">
+  <div class="text-wrapper">
+    <div class="centered">Drop your file here!</div>
+  </div>
+</div>
+<div *ngIf="batchesData">
+  <app-batches [(batchesData)]="batchesData"></app-batches>
+</div>
+<div class="spinner-background" *ngIf="loading"></div>
+<mat-spinner class="spinner" *ngIf="loading"></mat-spinner>

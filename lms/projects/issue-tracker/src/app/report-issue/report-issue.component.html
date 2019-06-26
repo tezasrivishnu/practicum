@@ -1,0 +1,32 @@
+<div class="container">
+    <mat-card class="my-card"  >
+        <mat-toolbar class="my-form" color="primary">
+            <span>Issue Tracker</span>
+        </mat-toolbar>
+        <br>
+        <mat-card-content>
+          <form [formGroup]="myForm" class="my-form">
+              <mat-form-field class="full-width">
+                <input matInput [ngModel]="this.email"  placeholder="Email" name="email" formControlName="email" [readonly]="this.email">
+                <mat-error *ngIf="!myForm.controls['email'].valid && myForm.controls['email'].touched">
+                    {{ titleAlert }}
+                  </mat-error>
+              </mat-form-field>
+              <br>
+              <mat-form-field class="full-width">
+                <textarea matInput cdkTextareaAutosize cdkAutosizeMinRows="4" placeholder="issue" formControlName="issue"></textarea>
+                <mat-error *ngIf="!myForm.controls['issue'].valid && myForm.controls['issue'].touched">
+                  {{ titleAlert }}
+                </mat-error>
+              </mat-form-field>
+              
+          </form>
+        </mat-card-content>
+        <mat-card-actions>
+          <button  mat-raised-button (click)="onSubmit()" color="primary">Report</button>
+        </mat-card-actions>
+        <mat-error *ngIf="errorress!=''">
+          {{errorress}}
+        </mat-error>
+    </mat-card>
+  </div>

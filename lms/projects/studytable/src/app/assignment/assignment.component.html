@@ -1,0 +1,71 @@
+<mat-spinner *ngIf='spin' class="spinner"></mat-spinner>
+<mat-card  class="example-card">
+  <form [formGroup]="form" >
+    <mat-card-content>
+      <div *ngFor="let q of question.questionText" class="question">
+        <ng-container *ngIf="q.text">
+          <span [innerHTML]='q.text'></span>
+        </ng-container>
+        <ng-container *ngIf="q.attachment">
+          <a [href]='q.attachment'>{{ q.attachment[0] | stripfilename }}</a>
+        </ng-container>
+
+      </div>
+      <div>
+        Max marks: {{question.max_marks}}
+      </div>
+
+      <mat-form-field class="sub-link">
+        <input matInput placeholder="Paste your submission hyperlink here" value="" formControlName='assignment' (focusout) = "hello()">
+      </mat-form-field>
+      <div *ngIf="!courseLiveStatus" class='form-error'>
+        Currently not accepting submission.
+      </div>
+
+      <div *ngIf = "form.controls.assignment.touched && form.controls.assignment.invalid"  class="form-error">
+        <div *ngIf="form.controls.assignment.errors && form.controls.assignment.errors.required">
+          Submission can't be empty. <br>
+        </div>
+        <!-- <div *ngIf="form.controls.assignment.errors && form.controls.assignment.errors.pattern">
+          Please submit a valid URL. It has to start with <i>'http://'</i> or <i>'https://'</i> <br>
+        </div> -->
+      </div>
+    </mat-card-content>
+    <div *ngIf = "validateResponse(latestResponseTime)" class="container">
+      Submitted at: 
+      <span  class="timestamp">&nbsp;&nbsp;&nbsp;{{showTimestamp(latestResponseTime)}}</span>
+    </div>
+    <div class="buttons-align">
+      <mat-card-actions>
+        <button mat-button color="accent" type="submit" (click)="submit(form.value)"><mat-icon *ngIf="loadingResponse">autorenew</mat-icon>{{buttonValue}}</button>
+      </mat-card-actions>
+      
+      <mat-card-actions *ngIf = "userRole=='mentor'" >
+        <button  mat-button color="accent" (click)="showSubmissions()"><mat-icon *ngIf="loadingSubmission">autorenew</mat-icon>View Submissions</button>
+      </mat-card-actions>
+      <mat-card-actions *ngIf = "userRole=='student'" >
+        <button  mat-button color="accent" (click)="showScore()"><mat-icon *ngIf="loadingScore">autorenew</mat-icon>View Score</button>
+      </mat-card-actions>
+    </div>
+  </form>
+</mat-card>
+
+
+
+
+  <mat-card *ngIf="displayScore && studentResponse" class="example-card">
+    <p>Submitted Link: <a [href]="studentResponse.response.assignment" target="_blank">Click Here</a></p>
+    <p>Maximum Marks: {{studentResponse.maxMarks}}</p>
+    <p>Submitted at: {{showTimestamp(studentResponse.timestamp)}}</p>
+    <p *ngIf= "studentResponse.evaluationStatus"> Awarded marks: {{studentResponse.awardedMarks}} <br><br> Feedback: {{studentResponse.feedback}} </p>
+    <p *ngIf= "!studentResponse.evaluationStatus"> Awarded marks: Yet to Evaluate your Response </p>
+  </mat-card>
+
+
+  <mat-card *ngIf="displaySubmissions" class="example-card">
+    <p> Number of Students Submitted: {{studentsResponses.length}}</p>
+    <mat-accordion multi="true">
+      <app-assigment-evaluations *ngFor = "let response of studentsResponses"[userResponse]="response">loading...</app-assigment-evaluations>
+    </mat-accordion>
+      
+  </mat-card>

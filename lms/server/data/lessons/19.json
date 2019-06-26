@@ -1,0 +1,53 @@
+[
+  {
+    "activity_json": [
+      {
+        "activityType": "youtubevideo", 
+        "title": "Lecture 25: Reinforcement Learning-3", 
+        "videoURL": "uyI9_tcRGeU"
+      }, 
+      {
+        "URL": "piazza.com", 
+        "activityType": "discussion", 
+        "title": "Discussion forum"
+      }
+    ], 
+    "activity_name": "Lecture 25: Reinforcement Learning-3", 
+    "id": 24, 
+    "module_id": 19
+  }, 
+  {
+    "activity_json": [
+      {
+        "activityType": "youtubevideo", 
+        "title": "Lecture 27: Reinforcement Learning(3)", 
+        "videoURL": "_o6YI3gjdjQ"
+      }, 
+      {
+        "URL": "piazza.com", 
+        "activityType": "discussion", 
+        "title": "Discussion forum"
+      }
+    ], 
+    "activity_name": "Lecture 27: Reinforcement Learning(3)", 
+    "id": 23, 
+    "module_id": 19
+  }, 
+  {
+    "activity_json": [
+      {
+        "activityType": "youtubevideo", 
+        "title": "Lecture 28: Reinforcement Learning(4)", 
+        "videoURL": "krdE9RPHYJQ"
+      }, 
+      {
+        "URL": "piazza.com", 
+        "activityType": "discussion", 
+        "title": "Discussion forum"
+      }
+    ], 
+    "activity_name": "Lecture 28: Reinforcement Learning(4)", 
+    "id": 25, 
+    "module_id": 19
+  }
+]

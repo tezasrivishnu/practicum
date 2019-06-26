@@ -1,0 +1,132 @@
+<mat-spinner *ngIf='spin' class="spinner"></mat-spinner>
+<button mat-raised-button color="primary" (click)="openModal()">select</button>
+<div *ngIf='!spin'>
+  <!-- pipes... -->
+  <div class="container-left">
+
+    <mat-form-field *ngIf="userRole == 'mentor'">
+      <mat-select placeholder="roll number" name="roll" (click)="selectClicked(3)" [(ngModel)]="currentStudent">
+        <mat-option [value]=''>All</mat-option>
+        <mat-option *ngFor="let student of toUsers(userResponses)" [value]="student._id">
+          {{student.userID}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-select placeholder="{{environment.globals.module}}" name="module" [(ngModel)]="currentModule">
+        <mat-option [value]=''>All</mat-option>
+        <mat-option *ngFor="let module of toModules(userResponses | user: currentStudent  | evaluationStatus: currentEvaluationStatus)" [value]="module">
+          {{module.name}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-select placeholder="activity type" name="activityType" [(ngModel)]="currentActivityType">
+        <mat-option [value]=''>All</mat-option>
+        <mat-option *ngFor="let type of toTypes(userResponses | user: currentStudent | module: currentModule | evaluationStatus: currentEvaluationStatus)" [value]="type">
+          {{type}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-select placeholder="assignment evaluation status" name="module" [(ngModel)]="currentEvaluationStatus">
+        <mat-option [value]="'all'">All</mat-option>
+        <mat-option [value]="true">completed</mat-option>
+        <mat-option [value]="false">pending</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+  </div>
+
+  <!-- Expand or Collapse -->
+  <div class="container-left">
+    <button mat-raised-button (click)="openAll(studentAccordian)">Expand All</button> 
+    <button mat-raised-button (click)="closeAll(studentAccordian)">Collapse All</button>
+  </div>
+    
+  <div *ngIf="userRole == 'student' "  class="expansion-panel">
+    <mat-accordion #studentAccordian="matAccordion" multi="true" >    
+      <mat-expansion-panel *ngFor = "let response of userResponses | user: currentStudent | module: currentModule | evaluationStatus: currentEvaluationStatus | activityType: currentActivityType"  class="flex-item" [ngClass]="changeColor(response)">
+    <mat-expansion-panel-header class="oreo">
+    <mat-panel-title>
+      <mat-icon >{{iconChange(response.activityType) }}</mat-icon> &nbsp;&nbsp;&nbsp;&nbsp; {{ response.activityType }}
+    </mat-panel-title>
+    <mat-panel-description>
+      {{response.moduleId.name}}
+    </mat-panel-description>
+  </mat-expansion-panel-header>
+      
+          <!-- //div for student -->
+          <div>
+            <div *ngIf = "response.activityType == 'assignment' ">
+              <p>Submitted Link: <a [href]="response.response.assignment" target="_blank">Click Here</a></p>
+              <p>Maximum Marks: {{response.maxMarks}}</p>
+              <p>Submitted at: {{showTimestamp(response.timestamp)}}</p>
+              <p *ngIf= "response.evaluationStatus"> Awarded marks: {{response.awardedMarks}} <br> Feedback: {{response.feedback}} </p>
+              <p *ngIf= "!response.evaluationStatus"> Awarded marks: Yet to Evaluate your Response </p>
+              
+            </div>
+      
+            <div *ngIf = "response.activityType == 'quiz' ">
+              <span>Question: </span> <span [innerHTML]="response.questionId.text"></span>
+              <p>Maximum Marks: {{response.maxMarks}}</p>
+              <p>Submitted at: {{showTimestamp(response.timestamp)}}</p>
+              <p *ngIf="response.result; else another" > Your Response is correct <br> Awarded marks: {{response.awardedMarks}}</p>
+              <ng-template #another>
+                  <p> Your Response is Wrong <br> Awarded marks: {{response.awardedMarks}} </p>
+              </ng-template>
+            </div>
+          </div>
+      </mat-expansion-panel>
+    </mat-accordion>
+  </div>
+     
+  <div *ngIf="userRole == 'mentor' "  class="expansion-panel">
+
+    <mat-accordion #mentorAccordian="matAccordion" multi="true">
+
+      <mat-expansion-panel *ngFor = "let response of userResponses | user: currentStudent | module: currentModule | evaluationStatus: currentEvaluationStatus | activityType: currentActivityType"  class="flex-item" [ngClass]="changeColor(response)">
+        <mat-expansion-panel-header class="oreo">
+          <mat-panel-title>
+            <mat-icon >{{iconChange(response.activityType) }}</mat-icon> &nbsp;&nbsp;&nbsp;&nbsp; {{ response.activityType }}
+          </mat-panel-title>
+          <mat-panel-description>
+            {{response.moduleId.name}}
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+    
+
+        <div>
+          <div *ngIf = "response.activityType == 'assignment' ">
+            <p>Submitted Link: <a [href]="response.response.assignment" target="_blank">Click Here</a></p>
+            <p>Maximum Marks: {{response.maxMarks}}</p>
+            <p>Submitted at: {{showTimestamp(response.timestamp)}}</p>
+            <p>Student Name: {{response.userId.firstName + " " +response.userId.lastName}}</p>
+            <!-- <p *ngIf= "response.evaluationStatus"> Awarded marks: {{response.awardedMarks}} <br> Feedback: Static Content </p> -->
+            <div> 
+              <!-- <app-eval-form [userResponse]= "response"></app-eval-form> -->
+              <app-eval-form [userResponse]= "response" (submitted)="onSubmit($event)"></app-eval-form>
+            </div>
+            
+          </div>
+    
+          <div *ngIf = "response.activityType == 'quiz' ">
+            <span>Question: </span> <span [innerHTML]="response.questionId.text"></span>
+            <p>Maximum Marks: {{response.maxMarks}}</p>
+            <p>Submitted at: {{showTimestamp(response.timestamp)}}</p>
+            <p>Student Name: {{response.userId.firstName + " " +response.userId.lastName}}</p>
+            <p *ngIf="response.result; else another" > Correct Answer <br> Awarded marks: {{response.awardedMarks}}</p>
+            <ng-template #another>
+                <p> Wrong Answer <br> Awarded marks: {{response.awardedMarks}} </p>
+            </ng-template>
+            
+          </div>
+        </div>
+      </mat-expansion-panel>
+    </mat-accordion>
+  </div>
+    
+</div>

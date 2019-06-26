@@ -1,0 +1,9 @@
+<h2 mat-dialog-title>{{modalTitle}}</h2>
+<mat-dialog-content>
+  <div style="position: relative" class="margin">
+    <video (play)="onPlay()" #inputVideo id="inputVideo" autoplay muted></video>
+    <canvas #overlay id="overlay"></canvas>
+  </div>
+</mat-dialog-content>
+<button mat-button (click)="close()">capture</button>
+<button mat-button mat-dialog-close cdkFocusInitial>cancel</button>

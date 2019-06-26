@@ -1,0 +1,20 @@
+[
+  {
+    "activity_json": [
+      {
+        "activityType": "youtubevideo", 
+        "title": "Lecture 15: Representation Learning", 
+        "videoResources": "http://ec2-13-233-148-70.ap-south-1.compute.amazonaws.com/submissions/core_deep_learning/Neural%20Networks%20Representations/attachments/lec14.representations.pdf", 
+        "videoURL": "-bSG93O6O2s"
+      }, 
+      {
+        "URL": "piazza.com", 
+        "activityType": "discussion", 
+        "title": "Discussion forum"
+      }
+    ], 
+    "activity_name": "Lecture 15: Representation Learning", 
+    "id": 35, 
+    "module_id": 14
+  }
+]

@@ -1,0 +1,52 @@
+<!-- <button mat-raised-button (click)="isLinear = !isLinear" id="toggle-linear">
+  {{!isLinear ? 'Enable linear mode' : 'Disable linear mode'}}
+</button> -->
+<mat-card style="width:70em;margin-left:12.5em;margin-top:5em;height:auto">
+  <mat-horizontal-stepper [linear]="isLinear" #stepper>
+    
+  
+  
+    <mat-step>
+      <ng-template matStepLabel>Add Courses</ng-template>
+      <p style="text-align:center;font-weight:bold">(Drag and Drop courses)</p>
+      <div class="container-row">
+        <div class="example-container">
+          <h2>Available Courses</h2>
+          <div cdkDropList #availableCoursesList="cdkDropList" [cdkDropListData]="availableCourses"
+            [cdkDropListConnectedTo]="[coursesAssignedList]" class="example-list" (cdkDropListDropped)="drop($event)" [cdkDropListEnterPredicate]="noReturnPredicate">
+            <div class="example-box" *ngFor="let course of availableCourses" [cdkDragData]="course"cdkDrag>{{course.courseName}}</div>
+          </div>
+        </div>
+        <div class="example-container">
+          <h2>Courses Added</h2>
+          <div cdkDropList #coursesAssignedList="cdkDropList" [cdkDropListData]="coursesAssigned"
+            [cdkDropListConnectedTo]="[availableCoursesList]" class="example-list" (cdkDropListDropped)="drop($event)" [cdkDropListEnterPredicate]="evenPredicate">
+            <div class="example-box" *ngFor="let course of coursesAssigned" [cdkDragData]="course" cdkDrag>{{course.courseName}}</div>
+          </div>
+        </div>
+      </div>
+      <div class="container-row" style="width:100%">
+        <button mat-flat-button color="primary" matStepperPrevious>Back</button>
+        <button mat-flat-button color="primary" matStepperNext>Next</button>
+      </div>
+    </mat-step>
+  
+    <mat-step>
+      <div class="container-column">
+        <ng-template matStepLabel>Review</ng-template>
+        <h1>Please confirm the following program.</h1>
+        <mat-card style="background:whitesmoke; width: 75%" class="container-column">
+         
+          <mat-card *ngFor="let course of coursesAssigned" style="width:50%; margin-bottom: 1em">
+            <h3 style="text-align:center">{{ course.courseName }}</h3>
+          </mat-card>
+        </mat-card>
+  
+        <div class="container-row" style="width:100%">
+          <button mat-flat-button color="primary" matStepperPrevious>Back</button>
+          <button mat-flat-button color="primary" (click)="submitStepper()">Submit</button>
+        </div>
+      </div>
+    </mat-step>
+  </mat-horizontal-stepper>
+  </mat-card>

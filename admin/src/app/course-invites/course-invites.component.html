@@ -1,0 +1,23 @@
+<mat-card class="mat-typography" style="margin-left:10%;width: 70%;margin-right:10%;margin-top: 1em ">
+  <mat-card-title><mat-toolbar color="primary">Select Students to be enrolled</mat-toolbar></mat-card-title>
+  <mat-card-subtitle style="float: right;margin-bottom: 2em;display: inline;"><button mat-raised-button color="primary" style="float:right;margin-right:0.2em" (click)="selectToggle()"> Toggle Selections</button></mat-card-subtitle>
+  <mat-card-subtitle style="float: right;margin-bottom: 2em;display: inline;"><button mat-raised-button color="primary" style="float:right;margin-right:0.2em " (click)="selectAll()"> Select All</button></mat-card-subtitle>
+  <mat-card-subtitle style="float: right;margin-bottom: 2em;display: inline;"><button mat-raised-button color="primary" style="float:right;margin-right:0.2em" (click)="unselectAll()"> Unselect All</button></mat-card-subtitle>
+  
+  <mat-card-content style="margin:4em">
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+      <mat-card style="margin-bottom: 0.5em" formArrayName="studentList"
+        *ngFor="let studentObj of studentList;index as i" [class.mat-elevation-z2]="true">
+        <!-- <app-student [studentObj]="studentObj"></app-student> -->
+        <!-- <mat-form-field> -->
+        <mat-checkbox [formControlName]="i">{{ studentObj.firstName + " " + studentObj.lastName }}</mat-checkbox>
+        <!-- </mat-form-field> -->
+      </mat-card>
+
+      <button mat-raised-button color="primary" style="margin-top:2em">Submit</button>
+
+    </form>
+  </mat-card-content>
+  <br>
+  <br>
+</mat-card>

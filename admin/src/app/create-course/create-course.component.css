@@ -1,0 +1,17 @@
+.card{
+    height: auto;
+    width: 30em;
+    position: absolute;
+    top: calc(50% - (35em/2));
+    left: calc(50% - (30em/2));
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+}
+
+mat-form-field{
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}

@@ -1,0 +1,71 @@
+[
+  {
+    "activities": [
+      "Lecture 9 Convolutional Neural Networks(Part-2)", 
+      "Assignment"
+    ], 
+    "desc": null, 
+    "id": 8, 
+    "name": "Deep Neural Networks Convolutional Networks II"
+  }, 
+  {
+    "activities": [
+      "Lecture 9 Conolutional Neural Networks(Part-2)"
+    ], 
+    "desc": null, 
+    "id": 9, 
+    "name": "Deep Learning Recurrent Networks"
+  }, 
+  {
+    "activities": [
+      "Lecture 10 Recurrent Neural Networks RNN Part-1", 
+      "Assignment"
+    ], 
+    "desc": null, 
+    "id": 10, 
+    "name": "Deep Learning Recurrent Networks (Stability analysis and LSTMs)"
+  }, 
+  {
+    "activities": [
+      "Lecture 13 Recurrent Neural Networks RNN Part-3"
+    ], 
+    "desc": null, 
+    "id": 11, 
+    "name": "Deep Learning Recurrent Networks Part 3"
+  }, 
+  {
+    "activities": [
+      "Lecture 14: Connectionist Temporal Classification CTC", 
+      "Assignment"
+    ], 
+    "desc": null, 
+    "id": 12, 
+    "name": "Deep Learning Sequence to Sequence models (Connectionist Temporal Classification)"
+  }, 
+  {
+    "activities": [
+      "Sequence to Sequence models (Attention Models)", 
+      "Assignment"
+    ], 
+    "desc": null, 
+    "id": 13, 
+    "name": "Deep Learning Sequence to Sequence models (Attention Models)"
+  }, 
+  {
+    "activities": [
+      "Lecture 15: Representation Learning"
+    ], 
+    "desc": null, 
+    "id": 14, 
+    "name": "Neural Networks Representations"
+  }, 
+  {
+    "activities": [
+      "Lecture 15: Representation Learning", 
+      "Assignment"
+    ], 
+    "desc": null, 
+    "id": 20, 
+    "name": "Deep Learning Vulnerabilities, Defenses and Beyond"
+  }
+]

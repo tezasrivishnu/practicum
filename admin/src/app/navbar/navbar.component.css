@@ -1,0 +1,27 @@
+
+@media screen and (min-width: 700px) {
+    .example-icon {
+        padding: 0 14px;
+    }
+    
+    .example-spacer {
+        flex: 1 1 auto;
+        text-align: center;
+    }
+  }
+  @media screen and (max-width: 700px) {
+    
+    
+    .example-spacer {
+        display:inline-block;
+        text-align: center;
+        flex-direction: row;
+    }
+    .row{
+        display: flex;
+        flex-direction: column;
+    }
+    mat-toolbar{
+        height: auto;
+    }
+  }

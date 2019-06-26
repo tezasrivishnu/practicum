@@ -1,0 +1,133 @@
+{
+	"courses": [{
+			"desc": " This course covers Language Models, Sequence to Sequence Models, Attention Models, Deep Boltzmann Machine, Hopfield Network, Autoencoders, Reinforcement Learning, Deep Q Models, Deep Learning Model in Production Environment.<br><b>Projects Covered in the Course.</b><br>Medical Image Analysis, Stock Broking with Deep Q Learning, Recommender Systems with Deep Learning, Multi Agent System.",
+			"enroll_status": "enrolled",
+			"id": 4,
+			"image": "adv_deep_learning_models.png",
+			"instructors": [{
+					"image": "vijay.jpg",
+					"name": "Vijay Gabale",
+					"profile_url": "http://innosential.com/vijay-gabale"
+				},
+				{
+					"image": "Ajit.jpg",
+					"name": "Ajit Jaokar",
+					"profile_url": "http://innosential.com/ajit-jaokar"
+				},
+				{
+					"image": "Dipanjan.png",
+					"name": "Dipanjan Sarkar",
+					"profile_url": "http://innosential.com/dipanjan-sarkar"
+				}
+			],
+			"title": "Course IV: Advance Deep Learning Models"
+		},
+		{
+			"desc": "In this course we will cover four interesting application of AI<br>A. Natural Language Processing.<br>B. Computer Vision.<br>C. Speech Processing.<br>D. Cyber Security.<br>The problem to be solved in these areas will be selected by group class activity.",
+			"enroll_status": "enrolled",
+			"id": 5,
+			"image": "artificial_intelligence_and_its_applications.png",
+			"instructors": [{
+					"image": "vijay.jpg",
+					"name": "Vijay Gabale",
+					"profile_url": "http://innosential.com/vijay-gabale"
+				},
+				{
+					"image": "pratibha.jpg",
+					"name": "Pratinbha Moongi",
+					"profile_url": "http://innosential.com/pratibha-moogi"
+				},
+				{
+					"image": "Ajit.jpg",
+					"name": "Ajit Jaokar",
+					"profile_url": "http://innosential.com/ajit-jaokar"
+				}
+			],
+			"title": "Course V: Artificial Intelligence & its applications"
+		},
+		{
+			"desc": "In this course Danko Nikolic a brain scientists and AI inventor explains the fundamental of intelligence nedded for everyone interested in creating ambitious AI solutions. What you do when things get tough? In the course you will learn the differences between machine intelligence and human intelligence. You will understand why AI fails and when. AI does not have a narrow limited working memory (a.k.a., short-term memory) but we humans do. How does our working memory make us more intelligent than machines? Why do we understand the world and machines don't? You will also learn fundamental theorems for machine learning and see how they apply to machine intelligence and human intelligence.",
+			"enroll_status": "enrolled",
+			"id": 1,
+			"image": "intro_to_ai_and_nature_of_intelligence.png",
+			"instructors": [{
+				"image": "Dr. Danko Nikolic ex Max PLanck Institute, CDO savedroid.jpg",
+				"name": "Dekno Nikolic",
+				"profile_url": "http://innosential.com/prof-danko/"
+			}],
+			"title": "Course I: Introduction to AI & Nature of Intelligence"
+		},
+		{
+			"desc": "The Program covers the basics foundations you need to start learning AI and Algorithms. It covers Mathematical basics like Multivariate Calculus, Linear Algebra. Probability and Inferential Statistics, the course also cover basics of Python Programming.",
+			"enroll_status": "enrolled",
+			"id": 0,
+			"image": "foundation_of_learning_ai.png",
+			"instructors": [{
+					"image": "joy.jpg",
+					"name": "Joy Mustafi",
+					"profile_url": "http://innosential.com/joy-mustafi/"
+				},
+				{
+					"image": "Dipanjan.png",
+					"name": "Dipanjan Sarkar",
+					"profile_url": "http://innosential.com/dipanjan-sarkar"
+				},
+				{
+					"image": "pratibha.jpg",
+					"name": "Pratinbha Moongi",
+					"profile_url": "http://innosential.com/pratibha-moogi"
+				}
+			],
+			"title": "Foundation of Learning AI"
+		},
+		{
+			"desc": "The course covers the basics of Linear Algorithms and Neural Networks it also teaches you to create a your first neural network of multiple layer from scratch.  The topics of the course include the following. <br>Learning from Data, Learning Algorithms, Feed Forward Network, Regression, Ensemble Models, Support Vector Machine, Neural Network, Back Propogation.<br><b>Projects Covered in the Course.</b><br>Building your first Neural Network, Weather Forecasting, Auto-colorization of b/w images, Video Summarization.",
+			"enroll_status": "enrolled",
+			"id": 2,
+			"image": "intro_to_deep_learning.png",
+			"instructors": [{
+					"image": "joy.jpg",
+					"name": "Joy Mustafi",
+					"profile_url": "http://innosential.com/joy-mustafi/"
+				},
+				{
+					"image": "Dipanjan.png",
+					"name": "Dipanjan Sarkar",
+					"profile_url": "http://innosential.com/dipanjan-sarkar"
+				},
+				{
+					"image": "vijay.jpg",
+					"name": "Vijay Gabale",
+					"profile_url": "http://innosential.com/vijay-gabale"
+				}
+			],
+			"title": "Course II: Introduction to Deep Learning"
+		},
+		{
+			"desc": "This course covers Convolutional Neural Network, Recurrent Neural Network, Transfer Learning, LSTM, Bidirectional LSTM, Multitask Learning, One Shot Learning, Deep Learning from Problem Solving.s<br><b>Projects Covered in the Course.</b><br>Attention Models and End to End Language Modelling, Spam Detector, Tracking suspicious movement for Security, Q & A Systems, Conversational Systems.",
+			"enroll_status": "enrolled",
+			"id": 3,
+			"image": "core_deep_learning.png",
+			"instructors": [{
+					"image": "vijay.jpg",
+					"name": "Vijay Gabale",
+					"profile_url": "http://innosential.com/vijay-gabale"
+				},
+				{
+					"image": "Ajit.jpg",
+					"name": "Ajit Jaokar",
+					"profile_url": "http://innosential.com/ajit-jaokar"
+				},
+				{
+					"image": "pratibha.jpg",
+					"name": "Pratinbha Moongi",
+					"profile_url": "http://innosential.com/pratibha-moogi"
+				}
+			],
+			"title": "Course III: Core Deep Learning"
+		}
+	],
+	"desc": "A short description about this Program.",
+	"id": 1,
+	"name": "Artificial Intelligence and Applied Deep Learning"
+}

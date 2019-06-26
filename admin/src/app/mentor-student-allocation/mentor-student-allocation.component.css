@@ -1,0 +1,39 @@
+.dropzone {
+  min-height: 400px;
+  min-width: 400px;
+  display: table;
+  width: 100%;
+  background-color: #eee;
+  border: dotted 1px #aaa;
+}
+
+.text-wrapper {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.centered {
+  font-family: sans-serif;
+  font-size: 1.3em;
+  font-weight: bold;
+  text-align:center;
+}
+
+.spinner {
+  display: block;
+  position: fixed;
+  top: calc( 50% - ( 100px / 2) );
+  right: calc( 50% - ( 100px / 2) );
+}
+
+.spinner-background{
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  background: whitesmoke;
+  opacity: 0.7;
+}

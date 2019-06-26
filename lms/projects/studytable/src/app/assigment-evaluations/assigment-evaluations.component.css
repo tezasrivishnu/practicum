@@ -1,0 +1,18 @@
+
+.formSubmit{
+    width: 100%;
+}
+
+.assignment-neval-color{
+    background-color: #ffff8d;
+}
+
+.assignment-eval-color{
+    background-color: #ccff90;
+}
+
+
+.form-error  {
+    -webkit-text-stroke-color: #f44336;
+    -webkit-text-fill-color:  #f44336; /* red */
+  }

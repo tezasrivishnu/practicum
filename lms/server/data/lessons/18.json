@@ -1,0 +1,69 @@
+[
+  {
+    "activity_json": [
+      {
+        "activityType": "youtubevideo", 
+        "title": "Lecture 23: Reinforcement Learning", 
+        "videoResources": "http://ec2-13-233-148-70.ap-south-1.compute.amazonaws.com/submissions/adv_deep_learning_models/Reinforcement%20Learning-I/attachments/lec21.rl1.pdf", 
+        "videoURL": "YmARxEX-4PY"
+      }, 
+      {
+        "URL": "piazza.com", 
+        "activityType": "discussion", 
+        "title": "Discussion forum"
+      }
+    ], 
+    "activity_name": "Lecture 23: Reinforcement Learning", 
+    "id": 22, 
+    "module_id": 18
+  }, 
+  {
+    "activity_json": [
+      {
+        "activityType": "youtubevideo", 
+        "title": "Lecture 24: Reinforcement Learning-II", 
+        "videoResources": "http://ec2-13-233-148-70.ap-south-1.compute.amazonaws.com/submissions/adv_deep_learning_models/Reinforcement%20Learning-I/attachments/RL_3,4.pdf", 
+        "videoURL": "8Pan7_KPKK0"
+      }, 
+      {
+        "URL": "piazza.com", 
+        "activityType": "discussion", 
+        "title": "Discussion forum"
+      }
+    ], 
+    "activity_name": "Lecture 24: Reinforcement Learning-II", 
+    "id": 21, 
+    "module_id": 18
+  }, 
+  {
+    "activity_json": [
+      {
+        "activityType": "assignment", 
+        "questions": [
+          {
+            "questionText": [
+              {
+                "text": "Please find the pdf and  zip file"
+              }, 
+              {
+                "attachment": [
+                  "http://ec2-13-233-148-70.ap-south-1.compute.amazonaws.com/submissions/adv_deep_learning_models/Reinforcement%20Learning-I/attachments/rl_recitation_12.pdf"
+                ]
+              }, 
+              {
+                "attachment": [
+                  "http://ec2-13-233-148-70.ap-south-1.compute.amazonaws.com/submissions/adv_deep_learning_models/Reinforcement%20Learning-I/attachments/recitation-13.zip"
+                ]
+              }
+            ], 
+            "questionType": "filesubmission"
+          }
+        ], 
+        "title": "Assignment"
+      }
+    ], 
+    "activity_name": "Assignment", 
+    "id": 47, 
+    "module_id": 18
+  }
+]

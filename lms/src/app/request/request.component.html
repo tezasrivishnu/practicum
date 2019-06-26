@@ -1,0 +1,4 @@
+<div *ngFor="let item of userData.friendRequest">
+    {{item.firstName}}
+    <button (click)="accept(item)">accept</button>
+</div>

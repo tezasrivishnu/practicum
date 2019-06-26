@@ -1,0 +1,93 @@
+.example-card {
+    widows: 30%;
+   
+  }
+  .mb{
+    /* font-family: "Times New Roman", Times, serif; */
+    margin-left: 15%;
+    margin-right: 15%;
+  }
+  .tbr{
+    width: inherit;
+
+  }
+  .example-icon {
+    padding: 0 14px;
+  }
+  
+  .example-spacer {
+    flex: 1 1 auto;
+    text-align: center;
+  }
+  .cit{
+    height: 40px;
+    border-radius: 5px;
+    max-height: 200px;
+    padding: 0.5%
+    
+  }
+  a:link{
+     text-decoration:none
+  }
+  .cimg{
+    max-width: 35%;
+    max-height: 200px;
+    margin:2%;
+    object-fit: contain;
+  }
+  .cinfo{
+    width: 60%;
+    max-height: 100%
+  }
+  .ppic{
+    height: 40px;
+    width:40px;
+    border-radius: 50%;
+    padding-right: 5px;
+  }
+  
+  .ch{
+    height: 50px
+  }
+  .example-header-image {
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
+  }
+
+  .course-home-button{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin:1%
+  }
+  
+  .container{
+    display: flex;
+    margin-top: 50px;
+    color: white;
+    justify-content: center;
+    margin-bottom: 20px;
+    max-width: 700px;
+  }
+
+  .expansion-panel{
+    background-color: #3f51b5;
+  }
+
+  .course{
+    display: flex;
+  }
+
+  .course-description{
+    flex: 3;
+  }
+
+  .course-photo{
+    display: flex;
+    flex: 2;
+    justify-content: flex-end;
+  }
+
+  .mat-expansion-indicator::after{
+    color: white;
+  }
