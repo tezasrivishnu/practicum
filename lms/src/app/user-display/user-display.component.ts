@@ -26,7 +26,7 @@ export class UserDisplayComponent implements OnInit {
   ngOnInit() {
     this.request.getData(this.token).subscribe(data => {
       this.userData = data;
-      this.size = Object.keys(this.userData).length
+      this.size = this.userData.friendRequest.length;
       this.firstName = this.userData.firstName.toUpperCase();
       this.lastName = this.userData.lastName.toUpperCase();
       this.flag = this.userData.isPrivate;

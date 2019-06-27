@@ -22,6 +22,7 @@ import { ClassmatesComponent } from './classmates/classmates.component';
 import { FriendListComponent } from './friend-list/friend-list.component';
 import { ClassmateProfileComponent } from './classmate-profile/classmate-profile.component';
 import { RequestComponent } from './request/request.component';
+import { RequestProfileComponent } from './request-profile/request-profile.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { RequestComponent } from './request/request.component';
     ClassmatesComponent,
     FriendListComponent,
     ClassmateProfileComponent,
-    RequestComponent
+    RequestComponent,
+    RequestProfileComponent
   ],
   imports: [
     BrowserModule,

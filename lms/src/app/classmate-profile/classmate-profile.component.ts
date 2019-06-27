@@ -39,12 +39,17 @@ export class ClassmateProfileComponent implements OnInit {
   }
   sendRequest(){
     var post = this.i;
-    this.request.friendRequest({item:post},this.token);
-    this._location.back();
+    if(!this.userData1.friendRequest.find(element=>element==this.userData._id)){
+      this.request.friendRequest({item:post},this.token);
+      this._location.back();
+    }
+    
   }
-  infriends(){
-    console.log(!!this.userData1.friends.find(element=>element._id==this.userData._id));
-    return !!this.userData1.friends.find(element=>element._id==this.userData._id);
+  check(){
+    return !!this.userData1.friendRequest.find(element=>element==this.userData._id);
+  }
+  infriends(){    
+    return !!this.userData1.friends.find(element=>element==this.userData._id);
   }
 
 }

@@ -79,7 +79,7 @@ user.post("/friendrequest",jsonParser,async (req, res) => {
     console.log("user1->",user1._id);
     const user = await Users.findOne({ "_id": new ObjectId(req.body.item) });
     console.log("user->",user._id);
-    Users.collection.updateOne({"_id":user._id},{$push:{"friendRequest":user1}});
+    Users.collection.updateOne({"_id":user._id},{$push:{"friendRequest":user1._id}});
   } 
   catch (err) {
     logger.error(`Error in getting user details --> ${err.message}`);
@@ -91,11 +91,11 @@ user.post("/friendaccept",jsonParser,async (req, res) => {
     var accessToken = req.query.token;
     var decoded = jwt.verify(accessToken, publicKEY, verifyOptions);
     var user1 = await Users.findOne({ "email":  decoded.email});
-    console.log("user1->",user1._id);
+    console.log("user1 before->",user1);
     const user = await Users.findOne({ "_id": new ObjectId(req.body.item) });
-    console.log("user->",user._id);
-    Users.collection.updateOne({"_id":user1._id},{$pull:{"friendRequest":user}});
-    Users.collection.updateOne({"_id":user._id},{$push:{"friends":user1}});
+    Users.collection.updateOne({"_id":user1._id},{$pull:{"friendRequest":user._id}});
+    console.log("user1 after->",user1);
+    Users.collection.updateOne({"_id":user._id},{$push:{"friends":user1._id}});
   } 
   catch (err) {
     logger.error(`Error in getting user details --> ${err.message}`);
@@ -189,9 +189,13 @@ async function getId(req, res) {
 
 async function getUserDetails(req, res) {
   try {
+    
     var accessToken = req.query.token;
+    console.log(accessToken);
     var decoded = jwt.verify(accessToken, publicKEY, verifyOptions);
+    console.log(decoded.email);
     var user = await Users.findOne({ "email": decoded.email });
+    console.log(user);
     assert(user, "Not Found");
     logger.info("User's id sent successfully");
     res.json(user);
@@ -210,7 +214,6 @@ async function getUserDetails(req, res) {
 user.get("/get/student-list", async (req, res) => {
   try {
     var data = await Users.find({ role: "student" });
-    console.log(data);
     res.send(data);
   } catch (error) {
     res.sendStatus(500);

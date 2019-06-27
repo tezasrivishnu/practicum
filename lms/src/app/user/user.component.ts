@@ -19,6 +19,7 @@ export class UserComponent implements OnInit {
     this.request.getData(this.token).subscribe(data => {
       this.userData = data;
       this.size = Object.keys(this.userData).length
+      
     });
   }
 

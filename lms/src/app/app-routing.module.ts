@@ -17,6 +17,7 @@ import { ClassmatesComponent } from './classmates/classmates.component';
 import { FriendListComponent } from './friend-list/friend-list.component';
 import { ClassmateProfileComponent } from './classmate-profile/classmate-profile.component';
 import { RequestComponent } from './request/request.component';
+import { RequestProfileComponent } from './request-profile/request-profile.component';
 
 const routes: Routes = [
   { path: 'auth', loadChildren: '../../projects/auth/src/app/app.module#AuthSharedModule' },
@@ -35,7 +36,8 @@ const routes: Routes = [
   {path:'classmates', component: ClassmatesComponent},
   {path:'request', component:RequestComponent},
   {path:'friends',component:FriendListComponent},
-  {path:'classmate-profile/:id', component:ClassmateProfileComponent}
+  {path:'classmate-profile/:id', component:ClassmateProfileComponent},
+  {path:"request-profile", component: RequestProfileComponent}
 ];
 
 @NgModule({
