@@ -4,12 +4,16 @@ import { environment } from 'src/environments/environment';
 import { RequestService } from 'projects/signup/src/app/request.service';
 import { FormBuilder, FormGroup, FormControl, Validators} from '@angular/forms';
 import { Router } from '@angular/router';
+import {STEPPER_GLOBAL_OPTIONS} from '@angular/cdk/stepper';
 
 
 @Component({
   selector: 'app-user-profile',
   templateUrl: './user-profile.component.html',
-  styleUrls: ['./user-profile.component.css']
+  styleUrls: ['./user-profile.component.css'],
+  providers: [{
+    provide: STEPPER_GLOBAL_OPTIONS, useValue: {showError: true}
+  }]
 })
 export class UserProfileComponent implements OnInit {
   token:any;
