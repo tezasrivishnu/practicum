@@ -34,7 +34,7 @@
     "face-api.js": "^0.18.0",
     "fs": "0.0.1-security",
     "hammerjs": "^2.0.8",
-    "jsonwebtoken": "^8.5.0",
+    "jsonwebtoken": "^9.0.0",
     "jwt-decode": "^2.2.0",
     "lite-server": "^2.4.0",
     "mailgun-js": "^0.22.0",
